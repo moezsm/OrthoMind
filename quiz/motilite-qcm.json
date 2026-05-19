@@ -1,0 +1,487 @@
+{
+  "title": "QCM – Motilité oculaire et strabisme",
+  "description": "40 questions couvrant les cours : Introduction au strabisme, Les strabismes concomitants, Physiopathologie et classification des strabismes, et Malvoyance chez l'enfant.",
+  "source": "course/motilite",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quelle est la définition de l'axe visuel ?",
+      "options": {
+        "A": "La ligne joignant le pôle postérieur et le centre de la cornée",
+        "B": "La ligne joignant la fovéa et le point de fixation, en passant par le point nodal de l'œil",
+        "C": "L'angle formé entre l'axe anatomique et l'axe pupillaire",
+        "D": "La ligne perpendiculaire au plan de la rétine passant par le centre optique"
+      },
+      "answer": "B",
+      "explanation": "L'axe visuel joint la fovéa et le point de fixation, en passant par le point nodal de l'œil. L'axe anatomique, lui, joint le pôle postérieur et le centre de la cornée."
+    },
+    {
+      "id": 2,
+      "question": "L'angle kappa est défini comme :",
+      "options": {
+        "A": "L'angle entre les deux axes visuels",
+        "B": "L'angle entre l'axe visuel et l'axe anatomique",
+        "C": "L'angle de déviation mesuré au cover test",
+        "D": "L'angle de convergence en vision de près"
+      },
+      "answer": "B",
+      "explanation": "L'angle kappa est l'angle sous-tendu par l'axe visuel et l'axe anatomique (environ 5°)."
+    },
+    {
+      "id": 3,
+      "question": "Lors de la méthode aux reflets (test de Hirschberg), l'orthophorie est définie par :",
+      "options": {
+        "A": "Des reflets cornéens asymétriques par rapport à l'arête nasale",
+        "B": "Des reflets cornéens symétriques par rapport à l'arête nasale",
+        "C": "Un mouvement de refixation à la levée de l'occlusion",
+        "D": "L'absence de reflets cornéens lors de l'illumination"
+      },
+      "answer": "B",
+      "explanation": "En orthophorie, les reflets sont symétriques par rapport à l'arête nasale, ce qui traduit un alignement parfait des deux yeux sans effort."
+    },
+    {
+      "id": 4,
+      "question": "L'hétérophorie se distingue de l'hétérotropie en ce que :",
+      "options": {
+        "A": "L'hétérophorie est une déviation manifeste permanente",
+        "B": "L'hétérophorie est une tendance à la déviation uniquement lorsque la fusion est bloquée",
+        "C": "L'hétérophorie entraîne toujours une amblyopie",
+        "D": "L'hétérophorie est caractérisée par une déviation verticale"
+      },
+      "answer": "B",
+      "explanation": "L'hétérophorie est un strabisme latent : la déviation n'apparaît que quand la fusion est bloquée (par exemple sous écran). L'hétérotropie est une déviation manifeste."
+    },
+    {
+      "id": 5,
+      "question": "Les ductions sont des mouvements oculaires :",
+      "options": {
+        "A": "Binoculaires conjugués dans la même direction",
+        "B": "Binoculaires de sens opposés",
+        "C": "Monoculaires d'un seul œil (adduction, abduction, élévation, abaissement)",
+        "D": "Réflexes déclenchés par l'inclinaison de la tête"
+      },
+      "answer": "C",
+      "explanation": "Les ductions sont des mouvements oculaires monoculaires : adduction, abduction, élévation, abaissement."
+    },
+    {
+      "id": 6,
+      "question": "Les vergences sont des mouvements oculaires binoculaires :",
+      "options": {
+        "A": "Simultanés et conjugués dans la même direction",
+        "B": "Simultanés et de sens opposés",
+        "C": "Monoculaires de l'œil directeur",
+        "D": "Exclusivement verticaux"
+      },
+      "answer": "B",
+      "explanation": "Les vergences sont des mouvements binoculaires simultanés et de sens opposés (convergence ou divergence), contrairement aux versions qui sont conjugués dans la même direction."
+    },
+    {
+      "id": 7,
+      "question": "La loi de Sherrington d'innervation réciproque stipule que :",
+      "options": {
+        "A": "Une quantité égale d'influx nerveux est transmise aux muscles synergiques controlatéraux",
+        "B": "L'augmentation de l'influx d'un muscle est accompagnée d'une diminution de l'influx de son antagoniste",
+        "C": "Tout mouvement oculaire est précédé d'un mouvement de la tête",
+        "D": "Les muscles agonistes reçoivent toujours le même influx nerveux que les antagonistes"
+      },
+      "answer": "B",
+      "explanation": "La loi de Sherrington stipule que l'augmentation de l'influx nerveux d'un muscle extraoculaire est accompagnée d'une diminution de l'influx nerveux de son muscle antagoniste (inhibition réciproque)."
+    },
+    {
+      "id": 8,
+      "question": "La loi de Hering d'innervation égale concerne :",
+      "options": {
+        "A": "L'inhibition réciproque entre muscles agoniste et antagoniste du même œil",
+        "B": "L'innervation symétrique des muscles controlatéraux synergiques lors des mouvements conjugués",
+        "C": "La relation entre accommodation et convergence",
+        "D": "La torsion oculaire lors de l'inclinaison de la tête"
+      },
+      "answer": "B",
+      "explanation": "Lors des mouvements oculaires conjugués, la loi de Hering prévoit qu'une quantité égale et simultanée d'influx nerveux est transmise aux muscles controlatéraux synergiques (yoke muscles)."
+    },
+    {
+      "id": 9,
+      "question": "Lors de l'apparition d'un strabisme, la confusion est due au fait que :",
+      "options": {
+        "A": "Les deux maculas reçoivent les images de deux points différents, extériorisés au même endroit",
+        "B": "L'image est vue double car les axes visuels ne sont plus parallèles",
+        "C": "L'œil dévié ne perçoit plus aucun stimulus visuel",
+        "D": "La rétine périphérique de l'œil dominant est supprimée"
+      },
+      "answer": "A",
+      "explanation": "La confusion survient car les deux maculas reçoivent les images de deux points différents ; le cortex visuel les extériorise au même lieu de l'espace, ce qui crée une confusion. La neutralisation maculaire est le mécanisme de défense mis en place."
+    },
+    {
+      "id": 10,
+      "question": "La correspondance rétinienne anormale (CRA) est :",
+      "options": {
+        "A": "Un phénomène négatif correspondant à la suppression de l'image de l'œil dévié",
+        "B": "Un phénomène positif d'adaptation : modification des références spatiales de la rétine de l'œil dévié pour éviter la diplopie",
+        "C": "Une méthode thérapeutique de rééducation orthoptique",
+        "D": "Une forme particulière d'amblyopie fonctionnelle"
+      },
+      "answer": "B",
+      "explanation": "La CRA est un phénomène positif d'adaptation sensorielle : les références spatiales de la rétine de l'œil dévié se modifient pour éviter la diplopie. La suppression est le phénomène négatif correspondant."
+    },
+    {
+      "id": 11,
+      "question": "Un strabisme concomitant se caractérise par :",
+      "options": {
+        "A": "Une déviation variable selon la direction du regard, liée à une paralysie musculaire",
+        "B": "Une déviation constante dans toutes les directions du regard avec une motilité oculaire conservée",
+        "C": "Une limitation des mouvements oculaires dans au moins une direction",
+        "D": "Une diplopie permanente difficile à corriger"
+      },
+      "answer": "B",
+      "explanation": "Dans les strabismes concomitants, l'angle de déviation reste constant dans toutes les directions du regard et la motilité oculaire est conservée. Cela traduit principalement un déséquilibre du contrôle binoculaire."
+    },
+    {
+      "id": 12,
+      "question": "Chez l'enfant strabique, pourquoi la diplopie est-elle rarement présente ?",
+      "options": {
+        "A": "Car l'enfant n'a pas encore de vision binoculaire développée",
+        "B": "Car le cerveau met en place des mécanismes d'adaptation comme la suppression de l'image de l'œil dévié",
+        "C": "Car le strabisme de l'enfant est toujours intermittent",
+        "D": "Car la fixation fovéale n'est pas encore établie avant 3 ans"
+      },
+      "answer": "B",
+      "explanation": "Chez l'enfant, le strabisme concomitant entraîne rarement une diplopie car le cerveau met en place rapidement des mécanismes d'adaptation, principalement la suppression de l'image de l'œil dévié."
+    },
+    {
+      "id": 13,
+      "question": "Parmi les classifications des strabismes concomitants, selon la direction de la déviation on distingue :",
+      "options": {
+        "A": "Les ésotropies (déviation vers l'extérieur) et les exotropies (déviation vers l'intérieur)",
+        "B": "Les ésotropies (déviation vers l'intérieur) et les exotropies (déviation vers l'extérieur)",
+        "C": "Les hypertroplies (déviation vers le haut) et les hypotropies (déviation vers le bas)",
+        "D": "Les tropies (manifestes) et les phories (latentes)"
+      },
+      "answer": "B",
+      "explanation": "Les ésotropies sont caractérisées par une déviation vers l'intérieur (convergence) et les exotropies par une déviation vers l'extérieur (divergence)."
+    },
+    {
+      "id": 14,
+      "question": "Lors du cover test alterné, quel mouvement indique la présence d'une tropie (strabisme manifeste) ?",
+      "options": {
+        "A": "Un mouvement de refixation de l'œil découvert lors de la levée de l'occlusion de l'autre œil",
+        "B": "L'absence de tout mouvement lors de l'occlusion",
+        "C": "Un mouvement de torsion lors du passage d'un œil à l'autre",
+        "D": "Un clignement excessif lors de l'occlusion"
+      },
+      "answer": "A",
+      "explanation": "Lorsque l'on couvre un œil et que l'œil controlatéral effectue un mouvement de refixation, cela indique la présence d'un strabisme manifeste (tropie). Le test alterné permet de mesurer l'angle total de déviation."
+    },
+    {
+      "id": 15,
+      "question": "L'ésotropie accommodative est principalement liée à :",
+      "options": {
+        "A": "Une myopie forte non corrigée entraînant une divergence excessive",
+        "B": "Une hypermétropie non corrigée entraînant une accommodation excessive et une convergence excessive",
+        "C": "Un syndrome de rétraction musculaire",
+        "D": "Une paralysie du nerf VI"
+      },
+      "answer": "B",
+      "explanation": "L'ésotropie accommodative est liée à une hypermétropie non corrigée qui entraîne une accommodation excessive, elle-même responsable d'une convergence excessive. Elle apparaît généralement entre 2 et 4 ans et disparaît souvent avec la correction optique."
+    },
+    {
+      "id": 16,
+      "question": "L'ésotropie infantile se caractérise notamment par :",
+      "options": {
+        "A": "Son apparition après l'âge de 3 ans et un petit angle de déviation",
+        "B": "Son apparition avant 6 mois, un angle important, souvent associée à un nystagmus latent",
+        "C": "Sa correction complète par lunettes",
+        "D": "Sa survenue exclusivement chez les enfants hypermétropies"
+      },
+      "answer": "B",
+      "explanation": "L'ésotropie infantile apparaît généralement avant 6 mois. Elle se caractérise par un angle important et constant. On observe fréquemment des signes associés tels qu'un nystagmus latent ou une hyperaction des obliques inférieurs."
+    },
+    {
+      "id": 17,
+      "question": "L'exotropie intermittente se manifeste préférentiellement lors de :",
+      "options": {
+        "A": "La vision de près et lors d'une forte attention",
+        "B": "La fatigue, l'inattention, la forte luminosité et la fixation au loin",
+        "C": "La lecture intensive et le travail sur écran",
+        "D": "La nuit ou dans un environnement peu éclairé"
+      },
+      "answer": "B",
+      "explanation": "L'exotropie intermittente se manifeste principalement lors de la fatigue, de l'inattention, de la forte luminosité ou lors de la fixation au loin. Les patients peuvent fermer un œil en pleine lumière."
+    },
+    {
+      "id": 18,
+      "question": "Le microstrabisme se distingue des autres strabismes par :",
+      "options": {
+        "A": "Un angle de déviation très important, souvent supérieur à 30 dioptries prismatiques",
+        "B": "Un angle de déviation faible (< 10 DP), difficile à voir à l'inspection, souvent associé à une CRA",
+        "C": "Une limitation totale des mouvements oculaires",
+        "D": "Une diplopie permanente et invalidante"
+      },
+      "answer": "B",
+      "explanation": "Le microstrabisme correspond à une déviation de faible amplitude (généralement < 10 DP), souvent associée à une amblyopie modérée et à une CRA. Il nécessite des tests spécifiques pour être détecté (test de Lang, test de fixation excentrée)."
+    },
+    {
+      "id": 19,
+      "question": "Le traitement de l'amblyopie repose principalement sur :",
+      "options": {
+        "A": "La chirurgie des muscles oculomoteurs",
+        "B": "L'occlusion de l'œil dominant pour stimuler l'œil amblyope",
+        "C": "L'administration de collyres mydriatiques dans l'œil amblyope",
+        "D": "La rééducation binoculaire par synoptophore"
+      },
+      "answer": "B",
+      "explanation": "Le traitement de l'amblyopie repose principalement sur l'occlusion de l'œil dominant afin de stimuler l'œil amblyope. Des alternatives comme la pénalisation optique ou pharmacologique peuvent aussi être utilisées."
+    },
+    {
+      "id": 20,
+      "question": "La chirurgie des strabismes concomitants est indiquée lorsque :",
+      "options": {
+        "A": "Le diagnostic de strabisme est posé, quelle que soit la prise en charge médicale",
+        "B": "La déviation persiste malgré une prise en charge bien conduite (correction optique, traitement de l'amblyopie)",
+        "C": "L'enfant présente une ésotropie accommodative avec une forte hypermétropie",
+        "D": "Le patient a moins de 1 an"
+      },
+      "answer": "B",
+      "explanation": "Le traitement chirurgical est indiqué lorsque la déviation persiste malgré une prise en charge bien conduite (correction optique et traitement de l'amblyopie). Il consiste à modifier l'action des muscles oculomoteurs par recul ou résection."
+    },
+    {
+      "id": 21,
+      "question": "Selon l'OMS, une déficience visuelle est définie par une acuité visuelle inférieure à :",
+      "options": {
+        "A": "5/10 avec correction optique",
+        "B": "3/10 avec correction optique",
+        "C": "1/10 avec correction optique",
+        "D": "10/10 sans correction optique"
+      },
+      "answer": "B",
+      "explanation": "Selon l'OMS, une acuité visuelle inférieure à 3/10 avec correction optique est considérée comme une déficience visuelle."
+    },
+    {
+      "id": 22,
+      "question": "Le champ visuel normal commun aux deux yeux s'étend sur :",
+      "options": {
+        "A": "90° de large et 60° verticalement",
+        "B": "360° de large et 180° verticalement",
+        "C": "180° de large et 130° verticalement",
+        "D": "120° de large et 90° verticalement"
+      },
+      "answer": "C",
+      "explanation": "Normalement, le champ commun aux deux yeux s'étend sur 180° de large et 130° verticalement."
+    },
+    {
+      "id": 23,
+      "question": "Le glaucome congénital se caractérise par :",
+      "options": {
+        "A": "Une opacité du cristallin présente dès la naissance",
+        "B": "Une anomalie de développement de l'angle irido-cornéen empêchant l'évacuation de l'humeur aqueuse",
+        "C": "Une dégénérescence des photorécepteurs rétiniens",
+        "D": "Une prolifération vasculaire anormale de la rétine"
+      },
+      "answer": "B",
+      "explanation": "Le glaucome congénital est dû à une anomalie de développement de l'angle irido-cornéen qui empêche l'évacuation de l'humeur aqueuse. C'est la 1ère cause de cécité infantile en Tunisie."
+    },
+    {
+      "id": 24,
+      "question": "Quel est le signe de découverte le plus fréquent de la cataracte congénitale ?",
+      "options": {
+        "A": "La photophobie",
+        "B": "Le larmoiement clair",
+        "C": "La leucocorie (reflet blanc de la pupille)",
+        "D": "La mégalocornée"
+      },
+      "answer": "C",
+      "explanation": "La leucocorie (pupille blanche) est le signe de découverte le plus fréquent de la cataracte congénitale. Elle est également le signe d'appel du rétinoblastome."
+    },
+    {
+      "id": 25,
+      "question": "Le rétinoblastome est :",
+      "options": {
+        "A": "Une dystrophie rétinienne héréditaire touchant les photorécepteurs",
+        "B": "La tumeur maligne primitive de la rétine la plus fréquente chez l'enfant, dont le signe d'appel est la leucocorie",
+        "C": "Une complication du glaucome congénital non traité",
+        "D": "Une forme de rétinopathie du prématuré sévère"
+      },
+      "answer": "B",
+      "explanation": "Le rétinoblastome est la tumeur maligne primitive de la rétine la plus fréquente chez l'enfant. Le signe d'appel le plus fréquent est la leucocorie (pupille jaune). Le diagnostic doit être fait précocement pour améliorer le pronostic vital et fonctionnel."
+    },
+    {
+      "id": 26,
+      "question": "La rétinopathie du prématuré est liée à :",
+      "options": {
+        "A": "Une anomalie génétique du développement de la mélanine",
+        "B": "Un trouble prolifératif des vaisseaux sanguins de la rétine en développement chez les nourrissons prématurés",
+        "C": "Une accumulation de lipofuscine dans les cellules de l'épithélium pigmentaire",
+        "D": "Une dystrophie maculaire juvénile à transmission autosomique récessive"
+      },
+      "answer": "B",
+      "explanation": "La rétinopathie du prématuré est un trouble prolifératif touchant les vaisseaux sanguins de la rétine en développement des nourrissons prématurés. Le processus vasculaire de la rétine est normalement complété vers la 40e semaine de gestation."
+    },
+    {
+      "id": 27,
+      "question": "La maladie de Stargardt est :",
+      "options": {
+        "A": "La dystrophie maculaire juvénile la plus fréquente, de transmission autosomique récessive",
+        "B": "Une pathologie liée à un déficit en mélanine",
+        "C": "Un syndrome associant perte auditive et perte visuelle",
+        "D": "Une cataracte congénitale bilatérale à transmission autosomique dominante"
+      },
+      "answer": "A",
+      "explanation": "La maladie de Stargardt est la dystrophie maculaire juvénile la plus fréquente (prévalence 1/10 000). Elle est caractérisée par une accumulation anormale de lipofuscine dans l'épithélium pigmentaire rétinien et est de transmission autosomique récessive."
+    },
+    {
+      "id": 28,
+      "question": "L'albinisme est caractérisé par :",
+      "options": {
+        "A": "Une prolifération excessive de mélanine entraînant une photophobie sévère",
+        "B": "Une absence partielle ou totale de mélanine, entraînant une dépigmentation et une mauvaise acuité visuelle",
+        "C": "Une opacification du cristallin due à un déficit enzymatique",
+        "D": "Une atteinte des photorécepteurs de type cônes exclusivement"
+      },
+      "answer": "B",
+      "explanation": "L'albinisme est une maladie génétique due à une anomalie héréditaire de la mélanine, caractérisée par une absence partielle ou totale de mélanine. Il en résulte une dépigmentation et une mauvaise acuité visuelle, ainsi qu'une susceptibilité aux affections cutanées."
+    },
+    {
+      "id": 29,
+      "question": "Le test de Hirschberg (reflets cornéens) chez l'enfant permet de :",
+      "options": {
+        "A": "Mesurer précisément l'angle de déviation en dioptries prismatiques",
+        "B": "Évaluer la stéréoscopie et la vision binoculaire",
+        "C": "Dépister un strabisme en vérifiant la centration des reflets cornéens lors d'une illumination frontale",
+        "D": "Éliminer une anomalie de réfraction sous cycloplégie"
+      },
+      "answer": "C",
+      "explanation": "Le test de Hirschberg consiste à présenter une source lumineuse face au visage de l'enfant. Les reflets cornéens projetés doivent être centrés. En cas de strabisme, un des reflets ne sera pas centré."
+    },
+    {
+      "id": 30,
+      "question": "Parmi les aides visuelles suivantes, laquelle permet les grossissements les plus importants (jusqu'à 50 fois) ?",
+      "options": {
+        "A": "Les loupes grossissantes à main",
+        "B": "Les verres filtrants spécifiques",
+        "C": "Les télé-loupes montées sur lunettes (systèmes Galilée ou Kepler)",
+        "D": "Les agrandisseurs électroniques (associant caméra et écran)"
+      },
+      "answer": "D",
+      "explanation": "Les agrandisseurs électroniques, associant caméra et écran, permettent des grossissements jusqu'à 50 fois, ce qui est supérieur aux autres aides optiques. Certains peuvent également se relier à un ordinateur."
+    },
+    {
+      "id": 31,
+      "question": "La triade proximale regroupe trois phénomènes neurologiquement couplés, lesquels ?",
+      "options": {
+        "A": "Accommodation, convergence et myosis",
+        "B": "Fusion, vergence et accommodation",
+        "C": "Fixation, poursuite et saccade",
+        "D": "Convergence, divergence et torsion"
+      },
+      "answer": "A",
+      "explanation": "La triade proximale regroupe accommodation, convergence et myosis. Ces trois phénomènes sont neurologiquement couplés. C'est le lien entre accommodation et convergence qui explique les strabismes accommodatifs."
+    },
+    {
+      "id": 32,
+      "question": "Quelle est la différence entre une phorie et une tropie ?",
+      "options": {
+        "A": "La phorie est une déviation visible spontanément ; la tropie est compensée par la fusion",
+        "B": "La phorie est compensée par la fusion (latente) ; la tropie est visible spontanément (manifeste)",
+        "C": "La phorie est toujours horizontale ; la tropie est toujours verticale",
+        "D": "La phorie n'est détectable qu'au synoptophore ; la tropie est détectable au cover test"
+      },
+      "answer": "B",
+      "explanation": "La phorie est une déviation latente compensée par la fusion ; elle ne se manifeste que quand la fusion est bloquée. La tropie est une déviation manifeste visible spontanément."
+    },
+    {
+      "id": 33,
+      "question": "Dans un strabisme non concomitant, la déviation :",
+      "options": {
+        "A": "Est identique dans toutes les directions du regard et la motilité est conservée",
+        "B": "Varie selon la direction du regard et traduit une atteinte musculaire ou neurologique",
+        "C": "Est uniquement présente lors de la vision de près",
+        "D": "Disparaît complètement avec la correction optique"
+      },
+      "answer": "B",
+      "explanation": "Dans un strabisme non concomitant, la déviation varie selon la direction du regard, ce qui traduit une atteinte musculaire ou neurologique avec une limitation de la motricité oculaire (angle variable + limitation motrice)."
+    },
+    {
+      "id": 34,
+      "question": "Le torticolis compensateur dans le strabisme paralytique permet au patient de :",
+      "options": {
+        "A": "Augmenter l'acuité visuelle de l'œil atteint",
+        "B": "Adopter une position de tête pour éviter la diplopie",
+        "C": "Réduire l'angle de déviation en stimulant la fusion",
+        "D": "Prévenir le développement de l'amblyopie"
+      },
+      "answer": "B",
+      "explanation": "Dans les strabismes non concomitants paralytiques, le patient adopte une position anormale de la tête (torticolis compensateur) pour éviter la diplopie. C'est un signe très important pour l'orthoptiste."
+    },
+    {
+      "id": 35,
+      "question": "Le strabisme accommodatif pur se caractérise par :",
+      "options": {
+        "A": "Une déviation non corrigée par les lunettes, nécessitant une chirurgie",
+        "B": "Une déviation totalement corrigée par la correction optique adaptée",
+        "C": "Une déviation présente uniquement en vision de loin",
+        "D": "Une composante non accommodative associée persistant malgré la correction optique"
+      },
+      "answer": "B",
+      "explanation": "Le strabisme accommodatif pur est totalement corrigé par la correction optique (lunettes). C'est un élément clé pour le diagnostic. Le strabisme partiellement accommodatif, lui, persiste partiellement malgré la correction."
+    },
+    {
+      "id": 36,
+      "question": "La paralysie du nerf VI (nerf abducens) entraîne :",
+      "options": {
+        "A": "Un déficit d'adduction avec exotropie",
+        "B": "Un déficit d'abduction avec ésotropie, car le droit latéral est paralysé",
+        "C": "Un déficit de l'élévation avec hypotropie",
+        "D": "Un déficit de la convergence avec exophorie"
+      },
+      "answer": "B",
+      "explanation": "Le nerf VI innerve le muscle droit latéral. Sa paralysie entraîne un déficit d'abduction → ésotropie. C'est la paralysie des nerfs oculomoteurs la plus fréquente."
+    },
+    {
+      "id": 37,
+      "question": "Un strabisme intermittent se caractérise par :",
+      "options": {
+        "A": "Une déviation constante et permanente sans phase de réalignement",
+        "B": "Une déviation non constante avec alternance de phases alignées et de phases de déviation, car le système de fusion fonctionne encore partiellement",
+        "C": "Une déviation apparaissant uniquement en vision de près",
+        "D": "Une suppression unilatérale permanente entraînant une amblyopie sévère"
+      },
+      "answer": "B",
+      "explanation": "Le strabisme intermittent est caractérisé par une déviation non constante : il y a alternance entre des phases alignées et des phases de déviation. Cela signifie que le système de fusion fonctionne encore partiellement mais est instable ou dépassé dans certaines conditions."
+    },
+    {
+      "id": 38,
+      "question": "Le strabisme sensoriel est secondaire à :",
+      "options": {
+        "A": "Une hypermétropie forte bilatérale non corrigée",
+        "B": "Une baisse de vision unilatérale, quelle qu'en soit la cause, empêchant le maintien de l'alignement oculaire",
+        "C": "Une paralysie congénitale d'un muscle oculomoteur",
+        "D": "Un syndrome de rétraction musculaire (syndrome de Duane)"
+      },
+      "answer": "B",
+      "explanation": "Le strabisme sensoriel est secondaire à une baisse de vision unilatérale : la perte de qualité de l'image rétinienne empêche le maintien de l'alignement oculaire. Il peut s'agir d'une ésotropie ou d'une exotropie selon les cas."
+    },
+    {
+      "id": 39,
+      "question": "Dans la physiopathologie générale du strabisme, le déséquilibre repose sur l'interaction de trois systèmes, lesquels ?",
+      "options": {
+        "A": "Visuel, auditif et proprioceptif",
+        "B": "Moteur (muscles, nerfs), sensoriel (fusion) et accommodatif",
+        "C": "Cornéen, cristallinien et rétinien",
+        "D": "Cortical, sous-cortical et périphérique"
+      },
+      "answer": "B",
+      "explanation": "La physiopathologie générale du strabisme repose sur un déséquilibre entre trois systèmes : moteur (muscles, nerfs), sensoriel (fusion) et accommodatif. Un strabisme apparaît lorsque ces systèmes ne sont plus synchronisés."
+    },
+    {
+      "id": 40,
+      "question": "Quel est le rôle principal de l'orthoptiste dans la prise en charge du strabisme concomitant ?",
+      "options": {
+        "A": "Réaliser uniquement la chirurgie des muscles oculomoteurs",
+        "B": "Prescrire des médicaments pour réduire l'angle de déviation",
+        "C": "Intervenir à toutes les étapes (dépistage, bilan, rééducation, suivi) pour mesurer la déviation, évaluer les fonctions sensorielles et améliorer la vision binoculaire",
+        "D": "Effectuer exclusivement les réfractions sous cycloplégie"
+      },
+      "answer": "C",
+      "explanation": "L'orthoptiste joue un rôle central à toutes les étapes de la prise en charge : dépistage, bilan orthoptique, rééducation (traitement de l'amblyopie, amélioration de la fusion) et suivi. Son expertise est essentielle pour mesurer précisément la déviation et évaluer les fonctions sensorielles."
+    }
+  ]
+}
