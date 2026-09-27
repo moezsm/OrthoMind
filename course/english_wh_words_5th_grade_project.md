@@ -24,6 +24,7 @@ We use them to ask about:
 - **places**
 - **time**
 - **reasons**
+- **the way something happens**
 
 ---
 
@@ -36,6 +37,7 @@ We use them to ask about:
 | **Where** | asks about a place | when we want to know the location | **Where** do you live? |
 | **When** | asks about time | when we want to know the day or time | **When** is your birthday? |
 | **Why** | asks for a reason | when we want to know the cause | **Why** are you laughing? |
+| **How** | asks about the way something happens | when we want to know the method, condition, or feeling | **How** do you go to school? |
 
 ---
 
@@ -110,6 +112,19 @@ Think: **a reason**
 
 ---
 
+### **How** ❓🚲
+Think: **a way**
+
+```text
+   __o
+ _ \<_
+(_)/(_)
+```
+
+**Example:** How do you come to school?
+
+---
+
 ## 4) Super short rule ✅
 
 - Use **What** for a **thing**
@@ -117,6 +132,7 @@ Think: **a reason**
 - Use **Where** for a **place**
 - Use **When** for **time**
 - Use **Why** for a **reason**
+- Use **How** for **the way something happens**
 
 ---
 
@@ -137,6 +153,9 @@ Think: **a reason**
 5. **Why** is the baby chick jumping?  
    *Because it is excited!*
 
+6. **How** do you make a sandwich?  
+   *With bread, cheese, and tomatoes!*
+
 ---
 
 ## 6) Let’s practice! ✏️
@@ -148,18 +167,31 @@ Write the correct WH-word:
 3. __________ is your pencil case?  
 4. __________ are you tired?  
 5. __________ is in your lunch box?
+6. __________ do you come to school?
 
 ---
 
 ## 7) Match the word and the meaning 🔗
 
-| Word | Meaning |
+Write the correct letter next to each word.
+
+| Word | Letter |
 |---|---|
-| What | a place |
-| Who | time |
-| Where | a person |
-| When | a thing |
-| Why | a reason |
+| What | _____ |
+| Who | _____ |
+| Where | _____ |
+| When | _____ |
+| Why | _____ |
+| How | _____ |
+
+### Meanings
+
+- **A** = a reason  
+- **B** = a person  
+- **C** = a thing  
+- **D** = time  
+- **E** = a place  
+- **F** = the way something happens
 
 ---
 
@@ -171,7 +203,8 @@ Write one question with each WH-word:
 - **Who:** ___________________________________________  
 - **Where:** _________________________________________  
 - **When:** __________________________________________  
-- **Why:** ___________________________________________
+- **Why:** ___________________________________________  
+- **How:** ___________________________________________
 
 ---
 
@@ -183,7 +216,8 @@ Circle the correct word:
 2. **(Why / What)** are you crying?  
 3. **(When / Who)** do you eat dinner?  
 4. **(Where / What)** is your book?  
-5. **(What / Why)** is your favorite animal?
+5. **(What / Why)** is your favorite animal?  
+6. **(How / Who)** do you open the door?
 
 ---
 
