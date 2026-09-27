@@ -214,10 +214,10 @@ Circle the correct word:
 
 1. **(Who / Where)** is your mother?  
 2. **(Why / What)** are you crying?  
-3. **(When / How)** do you eat dinner?  
+3. **(When / Where)** do you eat dinner?  
 4. **(Where / What)** is your book?  
 5. **(What / Why)** is your favorite animal?  
-6. **(How / Who)** do you open the door?
+6. **(How / Where)** do you feel today?
 
 ---
 
