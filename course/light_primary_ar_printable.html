@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ملف حول الضوء | مستوى ابتدائي</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --ink: #24324a;
+      --paper: #fffdf8;
+      --line: #d7e0ee;
+      --yellow: #ffd166;
+      --sky: #dff5ff;
+      --mint: #e8ffe5;
+      --pink: #ffe4f1;
+      --peach: #ffe8d4;
+      --lavender: #efe6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Tahoma", sans-serif;
+      color: var(--ink);
+      background: white;
+    }
+
+    .page {
+      position: relative;
+      min-height: calc(297mm - 24mm);
+      background: var(--paper);
+      border: 3px solid #253858;
+      border-radius: 24px;
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .page + .page {
+      page-break-before: always;
+    }
+
+    .pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 25px 25px, rgba(255, 209, 102, 0.20) 3px, transparent 0),
+        radial-gradient(circle at 65px 45px, rgba(123, 223, 242, 0.20) 3px, transparent 0);
+      background-size: 90px 90px;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero,
+    .section,
+    .card,
+    .exercise,
+    .footer {
+      border: 2px solid #253858;
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 6px 0 rgba(37, 56, 88, 0.12);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 16px;
+      padding: 16px;
+      background: linear-gradient(135deg, #fff7d9 0%, #eefaff 100%);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+
+    .hero p {
+      margin: 6px 0;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .info {
+      background: linear-gradient(180deg, #f8f2ff 0%, #effff3 100%);
+      padding: 12px 14px;
+      border-radius: 18px;
+      border: 2px dashed #687895;
+    }
+
+    .line {
+      margin: 10px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed #7c8ca5;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .title {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 2px solid #253858;
+      background: var(--yellow);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .intro-grid,
+    .cards-grid,
+    .exercise-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cards-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .exercise-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      border: 2px solid #253858;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: white;
+      font-weight: 700;
+    }
+
+    .card {
+      padding: 12px;
+      min-height: 150px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .card p, .section p, .exercise p, li {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+
+    .sun { background: #fff5c8; }
+    .lamp { background: #e2f7ff; }
+    .shadow { background: #f1e8ff; }
+    .glass { background: #e8ffe6; }
+    .safety { background: #ffe5ef; }
+    .fun { background: #ffe9d6; }
+
+    .rule-list {
+      margin: 8px 0 0;
+      padding-right: 18px;
+    }
+
+    .exercise {
+      padding: 14px;
+    }
+
+    .exercise h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 150px;
+      border-bottom: 2px solid #253858;
+      transform: translateY(-1px);
+    }
+
+    .writing-rows {
+      display: grid;
+      gap: 10px;
+    }
+
+    .writing-row {
+      border-bottom: 2px dashed #7c8ca5;
+      padding: 8px 0;
+      min-height: 34px;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 16px;
+      text-align: center;
+      background: linear-gradient(180deg, #fff7da 0%, #eefaff 100%);
+    }
+
+    .footer h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .comment {
+      margin-top: 16px;
+      border-bottom: 2px dashed #7c8ca5;
+      height: 34px;
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="pattern"></div>
+    <div class="content">
+      <div class="hero">
+        <div>
+          <h1>ملف حول الضوء ☀️</h1>
+          <p><strong>المستوى:</strong> ابتدائي</p>
+          <p>الضوء شيء مهم في حياتنا اليومية. بفضله نرى الأشياء من حولنا، ونقرأ، ونلعب، ونتحرك بأمان.</p>
+          <p><strong>هدف الملف:</strong> التعرف إلى معنى الضوء، مصادره، وكيفية انتشاره، وأهمية الظل وبعض قواعد السلامة.</p>
+        </div>
+        <div class="info">
+          <div class="line">الاسم: ____________________</div>
+          <div class="line">القسم: ____________________</div>
+          <div class="line">التاريخ: __________________</div>
+          <p><strong>فكرة جميلة:</strong> يمكن تلوين الرسوم بعد الطباعة.</p>
+        </div>
+      </div>
+
+      <div class="intro-grid">
+        <div class="section">
+          <div class="title">ما هو الضوء؟</div>
+          <p>الضوء هو ما يساعدنا على رؤية الأشياء. عندما يكون المكان مضيئًا نرى بوضوح، وعندما يكون مظلمًا تصبح الرؤية صعبة.</p>
+          <div class="chips">
+            <span class="chip">نرى به الأشياء</span>
+            <span class="chip">يساعدنا على التعلم</span>
+            <span class="chip">يجعل المكان واضحًا</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="title">مصادر الضوء</div>
+          <p>هناك مصادر طبيعية ومصادر اصطناعية للضوء.</p>
+          <ul class="rule-list">
+            <li><strong>طبيعية:</strong> الشمس، النجوم.</li>
+            <li><strong>اصطناعية:</strong> المصباح، الشمعة، المصباح اليدوي.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">بطاقات سريعة وممتعة</div>
+        <div class="cards-grid">
+          <div class="card sun">
+            <h3>الشمس ☀️</h3>
+            <p>الشمس أكبر مصدر طبيعي للضوء خلال النهار.</p>
+            <p><strong>مثال:</strong> نرى الطريق والأشجار بفضل ضوء الشمس.</p>
+          </div>
+          <div class="card lamp">
+            <h3>المصباح 💡</h3>
+            <p>المصباح مصدر ضوء اصطناعي نستعمله في البيت أو المدرسة.</p>
+            <p><strong>مثال:</strong> نشعل المصباح عندما يحلّ الظلام.</p>
+          </div>
+          <div class="card shadow">
+            <h3>الظل 🌳</h3>
+            <p>يتكون الظل عندما يمنع جسمٌ معتم مرور الضوء.</p>
+            <p><strong>مثال:</strong> عندما نقف تحت الشمس يظهر ظلنا على الأرض.</p>
+          </div>
+          <div class="card glass">
+            <h3>مرور الضوء 🪟</h3>
+            <p>الزجاج الشفاف يسمح بمرور الضوء، أما الخشب فلا يسمح بذلك.</p>
+            <p><strong>مثال:</strong> تدخل أشعة الشمس من النافذة الزجاجية.</p>
+          </div>
+          <div class="card safety">
+            <h3>سلامة العين 👀</h3>
+            <p>يجب ألا ننظر مباشرة إلى الشمس أو أي ضوء قوي جدًا.</p>
+            <p><strong>تذكّر:</strong> نحافظ على أعيننا دائمًا.</p>
+          </div>
+          <div class="card fun">
+            <h3>نشاط صغير 🔦</h3>
+            <p>استعمل مصباحًا يدويًا في غرفة شبه مظلمة ولاحظ كيف يسير الضوء في اتجاه واحد.</p>
+            <p><strong>سؤال:</strong> ماذا يحدث عندما تضع كتابًا أمامه؟</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="pattern"></div>
+    <div class="content">
+      <div class="exercise-grid">
+        <div class="exercise glass">
+          <h2>معلومات أساسية</h2>
+          <ul class="rule-list">
+            <li>نحتاج إلى الضوء لكي نرى.</li>
+            <li>ينتشر الضوء في خط مستقيم.</li>
+            <li>الأجسام الشفافة تسمح بمرور الضوء.</li>
+            <li>الأجسام المعتمة تمنع مرور الضوء.</li>
+            <li>عندما يُحجب الضوء يتكوّن الظل.</li>
+          </ul>
+        </div>
+
+        <div class="exercise sun">
+          <h2>أكمل الفراغات ✏️</h2>
+          <p>1. أكبر مصدر طبيعي للضوء هو <span class="blank"></span></p>
+          <p>2. نرى الأشياء بفضل <span class="blank"></span></p>
+          <p>3. يتكوّن <span class="blank"></span> عندما يمنع جسم مرور الضوء.</p>
+          <p>4. الزجاج جسم <span class="blank"></span></p>
+          <p>5. الخشب جسم <span class="blank"></span></p>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <div class="exercise lamp">
+          <h2>ضع صحيح أو خطأ ✅❌</h2>
+          <p>1. القمر يصدر ضوءًا مثل الشمس. ________</p>
+          <p>2. المصباح مصدر ضوء اصطناعي. ________</p>
+          <p>3. يمكن النظر مباشرة إلى الشمس دون ضرر. ________</p>
+          <p>4. الجسم الشفاف يسمح بمرور الضوء. ________</p>
+          <p>5. يتكون الظل في غياب الضوء. ________</p>
+        </div>
+
+        <div class="exercise shadow">
+          <h2>صل بين العنصر وما يناسبه 🔗</h2>
+          <p>الشمس — ________ — مصدر ضوء طبيعي</p>
+          <p>المصباح — ________ — مصدر ضوء اصطناعي</p>
+          <p>الزجاج — ________ — يسمح بمرور الضوء</p>
+          <p>الخشب — ________ — لا يسمح بمرور الضوء</p>
+          <p>الظل — ________ — يتكون خلف جسم معتم</p>
+        </div>
+      </div>
+
+      <div class="exercise fun">
+        <h2>أجب بأسلوبك 🌈</h2>
+        <div class="writing-rows">
+          <div class="writing-row">لماذا نحتاج إلى الضوء؟ ______________________________________</div>
+          <div class="writing-row">اذكر مصدرين طبيعيين للضوء: __________________________________</div>
+          <div class="writing-row">اذكر مصدرين اصطناعيين للضوء: _________________________________</div>
+          <div class="writing-row">ماذا يحدث عندما نضع جسمًا معتمًا أمام الضوء؟ ___________________</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h2>أحسنت يا بطل العلوم! ⭐</h2>
+        <p><strong>الضوء يساعدنا على الرؤية والتعلم والحركة بأمان.</strong></p>
+        <p>ملاحظة المعلّم:</p>
+        <div class="comment"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
