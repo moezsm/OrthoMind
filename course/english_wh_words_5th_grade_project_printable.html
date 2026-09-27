@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WH-Words Fun Time! | 5th Grade English Project</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --ink: #24324a;
+      --pink: #ff7eb6;
+      --yellow: #ffd166;
+      --blue: #7bdff2;
+      --green: #b9fbc0;
+      --purple: #cdb4db;
+      --paper: #fffdf7;
+      --line: #d6deeb;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
+      color: var(--ink);
+      background: white;
+    }
+
+    .page {
+      width: 100%;
+      min-height: calc(297mm - 24mm);
+      background: var(--paper);
+      border: 3px solid #253858;
+      border-radius: 24px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page + .page {
+      page-break-before: always;
+    }
+
+    .dots {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15px 15px, rgba(123, 223, 242, 0.22) 2px, transparent 0),
+        radial-gradient(circle at 45px 40px, rgba(255, 126, 182, 0.18) 2px, transparent 0);
+      background-size: 70px 70px;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-bottom: 16px;
+    }
+
+    .hero-card,
+    .info-card,
+    .section,
+    .exercise,
+    .footer-box {
+      border: 2px solid #253858;
+      border-radius: 22px;
+      padding: 14px 16px;
+      background: white;
+      box-shadow: 0 6px 0 rgba(37, 56, 88, 0.12);
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #fef6ff 0%, #fefce8 100%);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 6px 0;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .sparkles {
+      font-size: 25px;
+      letter-spacing: 3px;
+    }
+
+    .info-card {
+      background: linear-gradient(180deg, #eef9ff 0%, #f3fff7 100%);
+    }
+
+    .line-field {
+      margin: 10px 0;
+      padding: 8px 0;
+      border-bottom: 2px dashed #7c8ca5;
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 6px 12px;
+      background: var(--yellow);
+      border: 2px solid #253858;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .list-bubbles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .bubble {
+      padding: 8px 10px;
+      border: 2px solid #253858;
+      border-radius: 999px;
+      text-align: center;
+      font-weight: 700;
+      background: #fff;
+    }
+
+    .bubble:nth-child(1) { background: #ffe5ef; }
+    .bubble:nth-child(2) { background: #fff0bf; }
+    .bubble:nth-child(3) { background: #dff7ff; }
+    .bubble:nth-child(4) { background: #e8ffe3; }
+    .bubble:nth-child(5) { background: #efe4ff; }
+    .bubble:nth-child(6) { background: #ffe8cf; }
+
+    .word-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .word-card {
+      border: 2px solid #253858;
+      border-radius: 18px;
+      padding: 12px;
+      background: white;
+      min-height: 162px;
+    }
+
+    .word-card h3 {
+      margin: 0 0 6px;
+      font-size: 21px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      border: 2px solid #253858;
+    }
+
+    .word-card p {
+      margin: 6px 0;
+      font-size: 13.2px;
+      line-height: 1.35;
+    }
+
+    .what { background: #ffe4ef; }
+    .who { background: #fff3c4; }
+    .where { background: #dff8ff; }
+    .when { background: #e6ffdf; }
+    .why { background: #efe3ff; }
+    .how { background: #ffe9d6; }
+
+    .rule-strip {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .rule {
+      border: 2px dashed #253858;
+      border-radius: 16px;
+      padding: 10px;
+      background: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .exercise h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .exercise ol,
+    .exercise ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    .exercise li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .line-answer {
+      display: inline-block;
+      min-width: 150px;
+      border-bottom: 2px solid #253858;
+      transform: translateY(-1px);
+    }
+
+    .match-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .match-grid div {
+      border: 2px dashed #6e7d96;
+      border-radius: 14px;
+      padding: 10px;
+      background: white;
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    .question-lines p {
+      margin: 9px 0;
+      font-size: 14px;
+    }
+
+    .big-writing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+    }
+
+    .write-row {
+      border-bottom: 2px dashed #6e7d96;
+      padding: 8px 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer-box {
+      background: linear-gradient(180deg, #fef6ff 0%, #eff9ff 100%);
+      text-align: center;
+    }
+
+    .footer-box h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .comment-line {
+      margin-top: 16px;
+      border-bottom: 2px dashed #6e7d96;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="dots"></div>
+    <div class="content">
+      <div class="hero">
+        <div class="hero-card">
+          <div class="sparkles">🌟 ❓ 🧠 ✏️ 🌈</div>
+          <h1>WH-WORDS FUN TIME!</h1>
+          <p><strong>5th Grade English Project</strong></p>
+          <p>Hello, Question Detectives! WH-words help us ask smart questions about people, things, places, time, reasons, and the way something happens.</p>
+          <p><strong>Goal:</strong> Learn each WH-word, know when to use it, and have fun while practicing!</p>
+        </div>
+        <div class="info-card">
+          <div class="line-field">Name: __________________________</div>
+          <div class="line-field">Class: __________________________</div>
+          <div class="line-field">Date: __________________________</div>
+          <p><strong>Printable tip:</strong> Use colored pencils to decorate your page after printing.</p>
+        </div>
+      </div>
+
+      <div class="intro-grid">
+        <div class="section">
+          <div class="section-title">What are WH-words?</div>
+          <p>WH-words are question words. We use them to ask for information.</p>
+          <div class="list-bubbles">
+            <div class="bubble">people</div>
+            <div class="bubble">things</div>
+            <div class="bubble">places</div>
+            <div class="bubble">time</div>
+            <div class="bubble">reasons</div>
+            <div class="bubble">the way things happen</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Super short rule</div>
+          <div class="rule-strip">
+            <div class="rule">What = a thing</div>
+            <div class="rule">Who = a person</div>
+            <div class="rule">Where = a place</div>
+            <div class="rule">When = time</div>
+            <div class="rule">Why = a reason</div>
+            <div class="rule">How = a way</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Meet the WH-words team!</div>
+        <div class="word-grid">
+          <article class="word-card what">
+            <h3>What ❓📦</h3>
+            <span class="tag">Thing or action</span>
+            <p><strong>Use it when:</strong> you want information about something.</p>
+            <p><strong>Example:</strong> What is your favorite color?</p>
+            <p><strong>Picture clue:</strong> a mystery box</p>
+          </article>
+
+          <article class="word-card who">
+            <h3>Who ❓👦</h3>
+            <span class="tag">Person</span>
+            <p><strong>Use it when:</strong> you want to know the person.</p>
+            <p><strong>Example:</strong> Who is your best friend?</p>
+            <p><strong>Picture clue:</strong> a smiling student</p>
+          </article>
+
+          <article class="word-card where">
+            <h3>Where ❓🏠</h3>
+            <span class="tag">Place</span>
+            <p><strong>Use it when:</strong> you want to know the location.</p>
+            <p><strong>Example:</strong> Where do you live?</p>
+            <p><strong>Picture clue:</strong> a little house</p>
+          </article>
+
+          <article class="word-card when">
+            <h3>When ❓⏰</h3>
+            <span class="tag">Time</span>
+            <p><strong>Use it when:</strong> you want to know the day or the time.</p>
+            <p><strong>Example:</strong> When is your birthday?</p>
+            <p><strong>Picture clue:</strong> a clock</p>
+          </article>
+
+          <article class="word-card why">
+            <h3>Why ❓😂</h3>
+            <span class="tag">Reason</span>
+            <p><strong>Use it when:</strong> you want to know the cause.</p>
+            <p><strong>Example:</strong> Why are you laughing?</p>
+            <p><strong>Picture clue:</strong> a happy face</p>
+          </article>
+
+          <article class="word-card how">
+            <h3>How ❓🚲</h3>
+            <span class="tag">Way or feeling</span>
+            <p><strong>Use it when:</strong> you want to know the method, condition, or feeling.</p>
+            <p><strong>Example:</strong> How do you go to school?</p>
+            <p><strong>Picture clue:</strong> a bicycle ride</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="dots"></div>
+    <div class="content">
+      <div class="exercise-grid">
+        <div class="exercise what">
+          <h2>Funny classroom examples 😄</h2>
+          <ol>
+            <li><strong>What</strong> is the monkey eating? <br><strong>Answer:</strong> It is eating a banana!</li>
+            <li><strong>Who</strong> is singing in the classroom? <br><strong>Answer:</strong> Sara is singing!</li>
+            <li><strong>Where</strong> is the school bag? <br><strong>Answer:</strong> It is under the desk!</li>
+            <li><strong>When</strong> do penguins sleep? <br><strong>Answer:</strong> They sleep at night!</li>
+            <li><strong>Why</strong> is the baby chick jumping? <br><strong>Answer:</strong> Because it is excited!</li>
+            <li><strong>How</strong> do you make a sandwich? <br><strong>Answer:</strong> First, put cheese and tomatoes in the bread. Then eat it!</li>
+          </ol>
+        </div>
+
+        <div class="exercise where">
+          <h2>Let’s practice! ✏️</h2>
+          <div class="question-lines">
+            <p>1. <span class="line-answer"></span> is your teacher?</p>
+            <p>2. <span class="line-answer"></span> do you play football?</p>
+            <p>3. <span class="line-answer"></span> is your pencil case?</p>
+            <p>4. <span class="line-answer"></span> are you tired?</p>
+            <p>5. <span class="line-answer"></span> is in your lunch box?</p>
+            <p>6. <span class="line-answer"></span> do you come to school?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise-grid">
+        <div class="exercise why">
+          <h2>Match the word and the meaning 🔗</h2>
+          <div class="match-grid">
+            <div>
+              <strong>Words</strong><br>
+              1. What<br>
+              2. Who<br>
+              3. Where<br>
+              4. When<br>
+              5. Why<br>
+              6. How
+            </div>
+            <div>
+              <strong>Meanings</strong><br>
+              A. a reason<br>
+              B. a person<br>
+              C. a thing<br>
+              D. time<br>
+              E. a place<br>
+              F. the way something happens
+            </div>
+          </div>
+          <p><strong>Answers:</strong> 1.__ 2.__ 3.__ 4.__ 5.__ 6.__</p>
+        </div>
+
+        <div class="exercise when">
+          <h2>Star challenge ⭐</h2>
+          <ul>
+            <li>(<strong>Who</strong> / Where) is your mother?</li>
+            <li>(<strong>Why</strong> / What) are you crying?</li>
+            <li>(<strong>When</strong> / Where) is lunchtime?</li>
+            <li>(<strong>Where</strong> / What) is your book?</li>
+            <li>(<strong>What</strong> / Why) is your favorite animal?</li>
+            <li>(<strong>How</strong> / Where) do you feel today?</li>
+          </ul>
+          <p>Circle the correct word after printing.</p>
+        </div>
+      </div>
+
+      <div class="exercise how">
+        <h2>My own questions 🌈</h2>
+        <div class="big-writing">
+          <div class="write-row">What: ____________________________________</div>
+          <div class="write-row">Who: _____________________________________</div>
+          <div class="write-row">Where: ___________________________________</div>
+          <div class="write-row">When: ____________________________________</div>
+          <div class="write-row">Why: _____________________________________</div>
+          <div class="write-row">How: _____________________________________</div>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h2>Great job, little English star! 🌟</h2>
+        <p><strong>WH-words help us ask better questions every day.</strong></p>
+        <p>Teacher’s comment:</p>
+        <div class="comment-line"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
