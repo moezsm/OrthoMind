@@ -121,7 +121,7 @@ Think: **a way**
 (_)/(_)
 ```
 
-**Example:** How do you come to school?
+**Example:** How do you go to school?
 
 ---
 
@@ -154,7 +154,7 @@ Think: **a way**
    *Because it is excited!*
 
 6. **How** do you make a sandwich?  
-   *With bread, cheese, and tomatoes!*
+   *First, put cheese and tomatoes in the bread. Then eat it!*
 
 ---
 
@@ -214,7 +214,7 @@ Circle the correct word:
 
 1. **(Who / Where)** is your mother?  
 2. **(Why / What)** are you crying?  
-3. **(When / Who)** do you eat dinner?  
+3. **(When / How)** do you eat dinner?  
 4. **(Where / What)** is your book?  
 5. **(What / Why)** is your favorite animal?  
 6. **(How / Who)** do you open the door?
