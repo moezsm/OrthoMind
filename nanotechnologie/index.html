@@ -3,36 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nanotechnology</title>
+<title>Nanotechnology in Medicine</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden;background:#050816;color:#e8f1ff;font-family:Segoe UI,Arial,sans-serif}
 #bg{position:fixed;inset:0;z-index:0}
-.slide{position:absolute;inset:0 0 150px 0;display:flex;align-items:center;justify-content:center;gap:48px;padding:30px 70px;opacity:0;pointer-events:none;transform:translateX(80px);transition:opacity .7s,transform .7s;z-index:1}
+.slide{position:absolute;inset:0 0 70px 0;display:flex;align-items:center;justify-content:center;gap:44px;padding:30px 70px;opacity:0;pointer-events:none;transform:translateX(80px);transition:opacity .7s,transform .7s;z-index:1}
 .slide.active{opacity:1;pointer-events:auto;transform:none}
 .slide.prev{transform:translateX(-80px)}
-.text{flex:1;max-width:640px}
+.text{flex:1;max-width:660px}
 h1{font-size:3.2rem;background:linear-gradient(90deg,#4df0ff,#9b7bff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:16px}
-h2{font-size:2.3rem;color:#4df0ff;margin-bottom:18px}
+h2{font-size:2.2rem;color:#4df0ff;margin-bottom:6px}
+.tag{color:#9b7bff;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
 p.sub{font-size:1.3rem;color:#b8c8e8}
+p.lead{font-size:1.1rem;color:#b8c8e8;margin-bottom:10px}
 ul{list-style:none}
-li{font-size:1.25rem;margin:10px 0;padding-left:30px;position:relative;opacity:0;transform:translateX(-30px)}
+li{font-size:1.15rem;margin:9px 0;padding-left:30px;position:relative;opacity:0;transform:translateX(-30px)}
+li b{color:#4df0ff}
 li:before{content:"◆";position:absolute;left:0;color:#9b7bff}
 .active li{animation:in .6s forwards}
 .active li:nth-child(1){animation-delay:.3s}.active li:nth-child(2){animation-delay:.6s}
 .active li:nth-child(3){animation-delay:.9s}.active li:nth-child(4){animation-delay:1.2s}
-.active li:nth-child(5){animation-delay:1.5s}
+.active li:nth-child(5){animation-delay:1.5s}.active li:nth-child(6){animation-delay:1.8s}
 @keyframes in{to{opacity:1;transform:none}}
-.pic{flex:0 0 380px;height:380px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 0 25px #4df0ff66)}
+.pic{flex:0 0 400px;height:400px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 0 25px #4df0ff66)}
 .pic svg{width:100%;height:100%}
+.pic text{font-family:inherit}
 .active .pic{animation:pop .9s cubic-bezier(.2,1.4,.4,1)}
 @keyframes pop{from{opacity:0;transform:scale(.4) rotate(-15deg)}to{opacity:1;transform:none}}
 .cols{display:flex;gap:30px;width:100%;max-width:1100px}
 .col{flex:1;padding:24px;border-radius:18px;background:#ffffff0d;backdrop-filter:blur(6px)}
 .col.pro{border:2px solid #3dffa0}.col.con{border:2px solid #ff5f7a}
-.col h2{font-size:1.8rem}.pro h2{color:#3dffa0}.con h2{color:#ff5f7a}
+.col h2{font-size:1.8rem;margin-bottom:12px}.pro h2{color:#3dffa0}.con h2{color:#ff5f7a}
 .con li:before{color:#ff5f7a}.pro li:before{color:#3dffa0}
-.col li{font-size:1.1rem}
+.col li{font-size:1.05rem}
+.timeline{display:flex;gap:14px;margin-top:10px}
+.timeline div{flex:1;background:#ffffff0d;border-top:3px solid #4df0ff;border-radius:8px;padding:10px;font-size:.95rem}
+.timeline b{display:block;color:#4df0ff;font-size:1.2rem}
 .float{animation:float 4s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-14px)}}
 .spin{transform-origin:200px 200px;animation:spin 12s linear infinite}
@@ -40,14 +47,14 @@ li:before{content:"◆";position:absolute;left:0;color:#9b7bff}
 @keyframes spin{to{transform:rotate(360deg)}}
 .pulse{animation:pulse 2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
 @keyframes pulse{50%{transform:scale(1.2);opacity:.7}}
-#panel{position:fixed;left:0;right:0;bottom:0;height:150px;background:#0b1230ee;border-top:2px solid #4df0ff55;padding:14px 70px;z-index:5;display:flex;gap:24px;align-items:center}
-#speech{flex:1;font-size:1.05rem;line-height:1.5;color:#cfe0ff;max-height:120px;overflow:auto}
-#speech b{color:#4df0ff}
-.ctrl{display:flex;flex-direction:column;gap:8px;align-items:center}
-.ctrl div{display:flex;gap:8px}
-button{background:#1b2a63;color:#fff;border:1px solid #4df0ff88;border-radius:10px;padding:8px 14px;font-size:1rem;cursor:pointer}
+.drift{animation:drift 3s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(40px,-10px)}}
+.flow{stroke-dasharray:8 8;animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-16}}
+#panel{position:fixed;left:0;right:0;bottom:0;height:70px;background:#0b1230ee;border-top:2px solid #4df0ff55;z-index:5;display:flex;gap:18px;align-items:center;justify-content:center}
+button{background:#1b2a63;color:#fff;border:1px solid #4df0ff88;border-radius:10px;padding:8px 18px;font-size:1rem;cursor:pointer}
 button:hover{background:#2c44a0}
-#count{font-size:.9rem;color:#8fa6d8}
+#count{font-size:.95rem;color:#8fa6d8;min-width:60px;text-align:center}
 #bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,#4df0ff,#9b7bff);z-index:6;transition:width .5s}
 </style>
 </head>
@@ -55,115 +62,207 @@ button:hover{background:#2c44a0}
 <canvas id="bg"></canvas>
 <div id="bar"></div>
 
+<!-- 1 Title -->
 <section class="slide active">
-  <div class="text"><h1>Nanotechnology</h1><p class="sub">Mastering matter at the atomic scale<br>1 nm = 0.000 000 001 m</p></div>
+  <div class="text"><h1>Nanotechnology in Medicine</h1><p class="sub">Diagnosing, treating and repairing the body<br>one molecule at a time</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <circle cx="200" cy="200" r="28" fill="#4df0ff"/><circle cx="200" cy="200" r="12" fill="#fff"/>
     <g class="spin"><ellipse cx="200" cy="200" rx="170" ry="60" fill="none" stroke="#9b7bff" stroke-width="3"/><circle cx="370" cy="200" r="12" fill="#9b7bff"/></g>
     <g class="spin2"><ellipse cx="200" cy="200" rx="60" ry="170" fill="none" stroke="#3dffa0" stroke-width="3"/><circle cx="200" cy="30" r="12" fill="#3dffa0"/></g>
     <g class="spin" style="animation-duration:9s"><ellipse cx="200" cy="200" rx="150" ry="110" transform="rotate(45 200 200)" fill="none" stroke="#ff8ad8" stroke-width="3"/><circle cx="306" cy="94" r="11" fill="#ff8ad8"/></g>
+    <path d="M200 175v50M175 200h50" stroke="#050816" stroke-width="8" stroke-linecap="round"/>
   </svg></div>
 </section>
 
+<!-- 2 Why the nanoscale -->
 <section class="slide">
-  <div class="text"><h2>What is it?</h2><ul>
-    <li>Manipulating matter between 1 and 100 nm</li><li>Idea launched by Richard Feynman in 1959</li>
-    <li>New physical and chemical properties</li><li>Where physics, chemistry and biology meet</li></ul></div>
+  <div class="text"><div class="tag">Context</div><h2>Why the nanoscale matters</h2>
+    <p class="lead">Biology already works at 1–100 nm, so nanomedicine speaks the body's own language.</p>
+    <ul><li><b>DNA</b> helix: about 2 nm wide</li><li><b>Proteins</b>: 2–10 nm</li><li><b>Viruses</b>: 20–200 nm</li>
+    <li><b>Nanoparticles</b> can cross barriers larger objects cannot</li><li>High surface-to-volume ratio: more drug, more binding sites</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
-    <rect x="30" y="60" width="340" height="60" rx="10" fill="#ffffff14" stroke="#4df0ff"/><text x="200" y="98" fill="#fff" font-size="22" text-anchor="middle">Human hair: 80,000 nm</text>
-    <rect x="30" y="150" width="340" height="60" rx="10" fill="#ffffff14" stroke="#9b7bff"/><text x="200" y="188" fill="#fff" font-size="22" text-anchor="middle">Red blood cell: 7,000 nm</text>
-    <rect x="30" y="240" width="340" height="60" rx="10" fill="#ffffff14" stroke="#3dffa0"/><text x="200" y="278" fill="#fff" font-size="22" text-anchor="middle">Virus: 100 nm</text>
-    <circle cx="60" cy="350" r="9" class="pulse" fill="#ff8ad8"/><text x="85" y="357" fill="#fff" font-size="20">Nanoparticle: 1–100 nm</text>
+    <g font-size="20" fill="#fff"><rect x="30" y="50" width="340" height="52" rx="10" fill="#ffffff14" stroke="#4df0ff"/><text x="200" y="84" text-anchor="middle">Red blood cell · 7,000 nm</text>
+    <rect x="30" y="120" width="340" height="52" rx="10" fill="#ffffff14" stroke="#9b7bff"/><text x="200" y="154" text-anchor="middle">Bacterium · 1,000 nm</text>
+    <rect x="30" y="190" width="340" height="52" rx="10" fill="#ffffff14" stroke="#3dffa0"/><text x="200" y="224" text-anchor="middle">Virus · 100 nm</text>
+    <rect x="30" y="260" width="340" height="52" rx="10" fill="#ffffff14" stroke="#ff8ad8"/><text x="200" y="294" text-anchor="middle">Protein · 5 nm</text>
+    <rect x="30" y="330" width="340" height="52" rx="10" fill="#ffffff14" stroke="#ffd36b"/><text x="200" y="364" text-anchor="middle">DNA width · 2 nm</text></g>
   </svg></div>
 </section>
 
+<!-- 3 Nanocarriers -->
 <section class="slide">
-  <div class="text"><h2>Nanomaterials</h2><ul>
-    <li>Graphene: a single layer of carbon atoms</li><li>Carbon nanotubes: ultra-strong</li>
-    <li>Silver and gold nanoparticles</li><li>Quantum dots for displays</li></ul></div>
-  <div class="pic float"><svg viewBox="0 0 400 400" fill="none" stroke="#4df0ff" stroke-width="4">
-    <polygon points="100,120 130,102 160,120 160,155 130,172 100,155"/><polygon points="160,120 190,102 220,120 220,155 190,172 160,155"/><polygon points="220,120 250,102 280,120 280,155 250,172 220,155"/>
-    <polygon points="130,172 160,155 190,172 190,207 160,224 130,207"/><polygon points="190,172 220,155 250,172 250,207 220,224 190,207"/>
-    <polygon points="160,224 190,207 220,224 220,259 190,277 160,259"/><polygon points="220,224 250,207 280,224 280,259 250,277 220,259"/>
-    <g stroke="#9b7bff"><circle class="pulse" cx="100" cy="120" r="7" fill="#9b7bff"/><circle class="pulse" cx="280" cy="259" r="7" fill="#9b7bff"/><circle class="pulse" cx="190" cy="172" r="7" fill="#9b7bff"/></g>
-    <text x="200" y="340" fill="#fff" stroke="none" font-size="26" text-anchor="middle">Hexagonal carbon lattice</text>
-  </svg></div>
-</section>
-
-<section class="slide">
-  <div class="text"><h2>Applications: medicine</h2><ul>
-    <li>Targeted drugs against cancer</li><li>Early diagnosis with nanosensors</li>
-    <li>RNA vaccines in lipid nanoparticles</li><li>Antibacterial dressings</li></ul></div>
+  <div class="text"><div class="tag">Tools</div><h2>The nanocarrier toolbox</h2>
+    <ul><li><b>Liposomes</b>: fat bubbles holding water- or fat-soluble drugs</li>
+    <li><b>Lipid nanoparticles</b>: protect fragile RNA</li>
+    <li><b>Polymeric nanoparticles</b>: biodegradable, slow release</li>
+    <li><b>Gold &amp; iron-oxide particles</b>: imaging and heating</li>
+    <li><b>Dendrimers &amp; quantum dots</b>: branched carriers, fluorescent labels</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
-    <circle cx="200" cy="200" r="150" fill="#ff5f7a22" stroke="#ff5f7a" stroke-width="3"/>
-    <circle cx="200" cy="200" r="55" fill="#ff5f7a55" stroke="#ff8ad8" stroke-width="3" class="pulse"/>
-    <g fill="#4df0ff"><circle class="float" cx="90" cy="140" r="14"/><circle class="float" style="animation-delay:.7s" cx="130" cy="290" r="14"/><circle class="float" style="animation-delay:1.4s" cx="300" cy="120" r="14"/><circle class="float" style="animation-delay:2s" cx="290" cy="290" r="14"/></g>
-    <g stroke="#4df0ff" stroke-width="2" stroke-dasharray="6 6"><line x1="104" y1="150" x2="160" y2="180"/><line x1="140" y1="278" x2="170" y2="240"/><line x1="290" y1="130" x2="245" y2="170"/><line x1="282" y1="278" x2="240" y2="240"/></g>
-    <text x="200" y="206" fill="#fff" font-size="18" text-anchor="middle">Cell</text>
+    <g class="float"><circle cx="110" cy="120" r="62" fill="#4df0ff22" stroke="#4df0ff" stroke-width="4"/><circle cx="110" cy="120" r="32" fill="#4df0ff55"/><text x="110" y="215" fill="#fff" font-size="17" text-anchor="middle">Liposome</text></g>
+    <g class="float" style="animation-delay:1s"><circle cx="290" cy="120" r="50" fill="#9b7bff55" stroke="#9b7bff" stroke-width="4"/><circle cx="270" cy="110" r="8" fill="#fff"/><circle cx="300" cy="135" r="8" fill="#fff"/><circle cx="296" cy="102" r="6" fill="#fff"/><text x="290" y="200" fill="#fff" font-size="17" text-anchor="middle">Polymer</text></g>
+    <g class="float" style="animation-delay:2s"><circle cx="110" cy="300" r="40" fill="#ffd36b" stroke="#fff" stroke-width="2"/><text x="110" y="370" fill="#fff" font-size="17" text-anchor="middle">Gold</text></g>
+    <g class="float" style="animation-delay:.5s"><circle cx="290" cy="300" r="44" fill="#3dffa055" stroke="#3dffa0" stroke-width="4" stroke-dasharray="6 6"/><circle cx="290" cy="300" r="10" fill="#3dffa0"/><text x="290" y="370" fill="#fff" font-size="17" text-anchor="middle">Quantum dot</text></g>
   </svg></div>
 </section>
 
+<!-- 4 Drug delivery -->
 <section class="slide">
-  <div class="text"><h2>Electronics, energy, environment</h2><ul>
-    <li>Processors etched at a few nanometers</li><li>Faster, longer-lasting batteries</li>
-    <li>More efficient solar panels</li><li>Nano-filters to purify water</li></ul></div>
+  <div class="text"><div class="tag">Treatment</div><h2>Targeted drug delivery</h2>
+    <p class="lead">The goal: put the drug exactly where it is needed.</p>
+    <ul><li><b>Passive targeting</b>: leaky tumor vessels let nanoparticles accumulate (EPR effect)</li>
+    <li><b>Active targeting</b>: antibodies on the surface bind receptors of diseased cells</li>
+    <li><b>Triggered release</b>: pH, heat or light opens the carrier</li>
+    <li>Example: <b>Doxil</b>, liposomal doxorubicin, lowers heart toxicity</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
-    <rect x="90" y="90" width="220" height="220" rx="18" fill="#1b2a63" stroke="#9b7bff" stroke-width="4"/>
-    <rect x="145" y="145" width="110" height="110" rx="8" fill="#050816" stroke="#4df0ff" stroke-width="3" class="pulse"/>
-    <path stroke="#4df0ff" stroke-width="5" d="M120 90v-40M160 90v-40M200 90v-40M240 90v-40M280 90v-40M120 310v40M160 310v40M200 310v40M240 310v40M280 310v40M90 120h-40M90 160h-40M90 200h-40M90 240h-40M90 280h-40M310 120h40M310 160h40M310 200h40M310 240h40M310 280h40"/>
-    <text x="200" y="208" fill="#3dffa0" font-size="30" text-anchor="middle">3 nm</text>
+    <path d="M0 140 Q200 90 400 140 L400 260 Q200 310 0 260Z" fill="#ff5f7a22" stroke="#ff5f7a" stroke-width="3"/>
+    <g class="drift"><circle cx="60" cy="200" r="20" fill="#4df0ff"/><circle cx="60" cy="200" r="8" fill="#fff"/></g>
+    <g class="drift" style="animation-delay:1s"><circle cx="40" cy="170" r="14" fill="#9b7bff"/></g>
+    <g class="drift" style="animation-delay:.5s"><circle cx="30" cy="235" r="14" fill="#3dffa0"/></g>
+    <circle cx="320" cy="200" r="60" fill="#ff8ad855" stroke="#ff8ad8" stroke-width="4" class="pulse"/>
+    <path d="M110 200H255" stroke="#4df0ff" stroke-width="4" class="flow"/>
+    <text x="320" y="206" fill="#fff" font-size="17" text-anchor="middle">Tumor</text>
+    <text x="200" y="350" fill="#fff" font-size="20" text-anchor="middle">Carrier → target cell</text>
   </svg></div>
 </section>
 
+<!-- 5 Vaccines -->
+<section class="slide">
+  <div class="text"><div class="tag">Treatment</div><h2>mRNA vaccines</h2>
+    <p class="lead">Lipid nanoparticles made rapid COVID-19 vaccines possible.</p>
+    <ul><li>mRNA alone is destroyed quickly in the body</li>
+    <li>A <b>lipid shell</b> of about 80–100 nm protects it</li>
+    <li>Cells take it up and read the instructions</li>
+    <li>They make a harmless protein; the immune system learns it</li>
+    <li>Same platform studied for flu, cancer and gene editing</li></ul></div>
+  <div class="pic"><svg viewBox="0 0 400 400">
+    <g class="float"><circle cx="200" cy="170" r="110" fill="#9b7bff22" stroke="#9b7bff" stroke-width="5"/>
+    <circle cx="200" cy="170" r="85" fill="none" stroke="#9b7bff88" stroke-width="2" stroke-dasharray="4 6"/>
+    <path d="M140 170 Q170 120 200 170 T260 170" fill="none" stroke="#4df0ff" stroke-width="6" class="flow"/>
+    <path d="M150 205 Q180 160 210 205 T265 200" fill="none" stroke="#3dffa0" stroke-width="5" class="flow"/></g>
+    <text x="200" y="350" fill="#fff" font-size="20" text-anchor="middle">mRNA inside a lipid nanoparticle</text>
+  </svg></div>
+</section>
+
+<!-- 6 Cancer therapy -->
+<section class="slide">
+  <div class="text"><div class="tag">Treatment</div><h2>Fighting cancer</h2>
+    <ul><li><b>Photothermal therapy</b>: gold nanoshells absorb near-infrared light and heat tumors</li>
+    <li><b>Magnetic hyperthermia</b>: iron-oxide particles heated by a magnetic field</li>
+    <li><b>Albumin-bound paclitaxel</b> (Abraxane) approved for breast and pancreatic cancer</li>
+    <li><b>Radio-enhancers</b>: hafnium oxide particles boost radiotherapy</li>
+    <li>Healthy tissue is spared more than with classic chemotherapy</li></ul></div>
+  <div class="pic"><svg viewBox="0 0 400 400">
+    <circle cx="200" cy="230" r="100" fill="#ff5f7a33" stroke="#ff5f7a" stroke-width="4" class="pulse"/>
+    <g fill="#ffd36b"><circle cx="170" cy="210" r="9"/><circle cx="215" cy="250" r="9"/><circle cx="235" cy="205" r="9"/><circle cx="185" cy="260" r="9"/></g>
+    <g stroke="#ff8a3d" stroke-width="5" stroke-linecap="round" class="flow"><path d="M130 30L170 130"/><path d="M200 20V130"/><path d="M270 30L230 130"/></g>
+    <text x="200" y="365" fill="#fff" font-size="19" text-anchor="middle">Light heats gold nanoparticles in the tumor</text>
+  </svg></div>
+</section>
+
+<!-- 7 Diagnostics -->
+<section class="slide">
+  <div class="text"><div class="tag">Diagnosis</div><h2>Nano-diagnostics &amp; imaging</h2>
+    <ul><li><b>MRI contrast</b>: iron-oxide nanoparticles reveal liver and lymph node lesions</li>
+    <li><b>Quantum dots</b>: bright, stable fluorescent tags for cells</li>
+    <li><b>Gold nanoparticle tests</b>: the color change in lateral-flow tests, such as pregnancy tests</li>
+    <li><b>Biosensors</b>: detect a few molecules of a cancer marker in a drop of blood</li>
+    <li>Earlier detection means better survival</li></ul></div>
+  <div class="pic"><svg viewBox="0 0 400 400">
+    <rect x="50" y="60" width="300" height="230" rx="18" fill="#0b1230" stroke="#4df0ff" stroke-width="4"/>
+    <ellipse cx="200" cy="175" rx="95" ry="80" fill="none" stroke="#9b7bff" stroke-width="3"/>
+    <ellipse cx="200" cy="175" rx="55" ry="45" fill="#3dffa022" stroke="#3dffa0" stroke-width="2"/>
+    <circle cx="225" cy="160" r="16" fill="#ff5f7a" class="pulse"/>
+    <path d="M50 175H350" stroke="#4df0ff88" stroke-width="2" class="flow"/>
+    <text x="200" y="345" fill="#fff" font-size="20" text-anchor="middle">Nanoparticles highlight a lesion</text>
+  </svg></div>
+</section>
+
+<!-- 8 Regeneration -->
+<section class="slide">
+  <div class="text"><div class="tag">Repair</div><h2>Regenerative medicine</h2>
+    <ul><li><b>Nano-scaffolds</b> mimic the extracellular matrix to guide cell growth</li>
+    <li><b>Nano-hydroxyapatite</b> in bone grafts and dental implants</li>
+    <li><b>Nerve repair</b>: aligned nanofibers guide regrowing axons</li>
+    <li><b>Wound care</b>: silver nanoparticle dressings fight infection</li>
+    <li>Growth factors released slowly from nanoparticles</li></ul></div>
+  <div class="pic"><svg viewBox="0 0 400 400" fill="none" stroke-width="3">
+    <g stroke="#4df0ff"><path d="M40 90Q200 40 360 90"/><path d="M40 140Q200 90 360 140"/><path d="M40 190Q200 140 360 190"/><path d="M40 240Q200 190 360 240"/><path d="M40 290Q200 240 360 290"/></g>
+    <g stroke="#9b7bff"><path d="M110 60Q90 200 110 330"/><path d="M200 50Q180 200 200 340"/><path d="M290 60Q270 200 290 330"/></g>
+    <g fill="#3dffa0" stroke="none"><circle class="pulse" cx="150" cy="150" r="12"/><circle class="pulse" cx="245" cy="215" r="12" style="animation-delay:.6s"/><circle class="pulse" cx="170" cy="270" r="12" style="animation-delay:1.2s"/></g>
+    <text x="200" y="378" fill="#fff" stroke="none" font-size="19" text-anchor="middle">Cells growing on a nanofiber scaffold</text>
+  </svg></div>
+</section>
+
+<!-- 9 Antimicrobial & future -->
+<section class="slide">
+  <div class="text"><div class="tag">Frontier</div><h2>Fighting infection &amp; the road ahead</h2>
+    <ul><li><b>Antibacterial</b>: silver and zinc-oxide particles damage resistant bacteria</li>
+    <li><b>Theranostics</b>: one particle diagnoses and treats</li>
+    <li><b>Smart implants</b>: nano-coatings reduce rejection</li>
+    <li><b>DNA origami</b> robots that open on contact with a target cell</li>
+    <li><b>Crossing the blood-brain barrier</b> for brain disease</li></ul></div>
+  <div class="pic"><svg viewBox="0 0 400 400">
+    <g class="spin"><circle cx="200" cy="200" r="150" fill="none" stroke="#4df0ff55" stroke-width="2" stroke-dasharray="6 10"/></g>
+    <g class="float"><rect x="150" y="150" width="100" height="100" rx="20" fill="#1b2a63" stroke="#4df0ff" stroke-width="4"/>
+    <path d="M200 175v50M175 200h50" stroke="#3dffa0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M150 180l-30-20M150 220l-30 20M250 180l30-20M250 220l30 20" stroke="#9b7bff" stroke-width="5" stroke-linecap="round"/></g>
+    <g fill="#ff5f7a"><circle class="pulse" cx="80" cy="90" r="10"/><circle class="pulse" cx="320" cy="310" r="10" style="animation-delay:.8s"/><circle class="pulse" cx="330" cy="100" r="10" style="animation-delay:1.4s"/></g>
+    <text x="200" y="378" fill="#fff" font-size="19" text-anchor="middle">A nanorobot concept</text>
+  </svg></div>
+</section>
+
+<!-- 10 Milestones -->
+<section class="slide">
+  <div class="text"><div class="tag">History</div><h2>Key milestones</h2>
+    <div class="timeline"><div><b>1959</b>Feynman: "There's plenty of room at the bottom"</div>
+    <div><b>1995</b>Doxil: first nanomedicine approved</div>
+    <div><b>2005</b>Abraxane approved</div>
+    <div><b>2018</b>First siRNA lipid-nanoparticle drug, Onpattro</div>
+    <div><b>2020</b>mRNA COVID-19 vaccines</div></div></div>
+  <div class="pic"><svg viewBox="0 0 400 400">
+    <path d="M40 330Q120 300 160 220T360 70" fill="none" stroke="#4df0ff" stroke-width="5" class="flow"/>
+    <g fill="#9b7bff"><circle cx="40" cy="330" r="10"/><circle cx="130" cy="280" r="10"/><circle cx="200" cy="190" r="10"/><circle cx="290" cy="120" r="10"/><circle class="pulse" cx="360" cy="70" r="12" fill="#3dffa0"/></g>
+    <text x="200" y="380" fill="#fff" font-size="19" text-anchor="middle">Growth of clinical nanomedicine</text>
+  </svg></div>
+</section>
+
+<!-- 11 Pros / cons -->
 <section class="slide">
   <div class="cols">
     <div class="col pro"><h2>✔ Advantages</h2><ul>
-      <li>Precise, less invasive medicine</li><li>Light and very strong materials</li>
-      <li>Energy savings</li><li>Miniaturized devices</li><li>Cleaner water and air</li></ul></div>
+      <li>Precise delivery, fewer side effects</li><li>Lower drug doses needed</li>
+      <li>Earlier and more sensitive diagnosis</li><li>Protects fragile drugs such as RNA</li>
+      <li>Combines imaging and therapy</li><li>Enables tissue repair</li></ul></div>
     <div class="col con"><h2>✘ Disadvantages</h2><ul>
-      <li>Possible health toxicity</li><li>Poorly understood environmental impact</li>
-      <li>High production costs</li><li>Privacy risks</li><li>Insufficient regulation</li></ul></div>
+      <li>Long-term toxicity still unclear</li><li>Particles may accumulate in liver or spleen</li>
+      <li>Hard to manufacture consistently</li><li>High R&amp;D and treatment costs</li>
+      <li>Complex regulation and approval</li><li>Ethical and privacy concerns</li></ul></div>
   </div>
 </section>
 
+<!-- 12 Conclusion -->
 <section class="slide">
-  <div class="text"><h1>Thank you!</h1><p class="sub">A tiny future… with huge stakes.<br>Any questions?</p></div>
+  <div class="text"><h1>Thank you!</h1><p class="sub">Nanomedicine: smaller tools,<br>bigger hope for patients.<br><br>Any questions?</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <g class="spin"><circle cx="200" cy="200" r="150" fill="none" stroke="#4df0ff" stroke-width="3" stroke-dasharray="10 14"/></g>
     <g class="spin2"><circle cx="200" cy="200" r="100" fill="none" stroke="#9b7bff" stroke-width="3" stroke-dasharray="4 10"/></g>
-    <circle cx="200" cy="200" r="45" fill="#3dffa0" class="pulse"/><text x="200" y="210" fill="#050816" font-size="28" font-weight="bold" text-anchor="middle">nano</text>
+    <circle cx="200" cy="200" r="48" fill="#3dffa0" class="pulse"/><path d="M200 175v50M175 200h50" stroke="#050816" stroke-width="9" stroke-linecap="round"/>
   </svg></div>
 </section>
 
-<div id="panel">
-  <div id="speech"></div>
-  <div class="ctrl"><div>
-    <button id="prev">◀</button><button id="play">🔇 Voice: OFF</button><button id="next">▶</button></div>
-    <span id="count"></span></div>
-</div>
+<div id="panel"><button id="prev">◀ Previous</button><span id="count"></span><button id="next">Next ▶</button></div>
 
-<script src="speech.js"></script>
 <script>
 const slides=[...document.querySelectorAll('.slide')];
-let cur=0,voice=false;
-const speech=document.getElementById('speech');
-function speak(t){
-  speechSynthesis.cancel();
-  if(!voice)return;
-  const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.95;
-  speechSynthesis.speak(u);
-}
+let cur=0;
 function show(i){
   cur=Math.max(0,Math.min(slides.length-1,i));
   slides.forEach((s,k)=>{s.classList.toggle('active',k===cur);s.classList.toggle('prev',k<cur)});
-  speech.innerHTML='<b>🎤 Speech:</b> '+SPEECH[cur];
   document.getElementById('count').textContent=(cur+1)+' / '+slides.length;
   document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
-  speak(SPEECH[cur]);
 }
 document.getElementById('next').onclick=()=>show(cur+1);
 document.getElementById('prev').onclick=()=>show(cur-1);
-document.getElementById('play').onclick=e=>{voice=!voice;e.target.textContent=voice?'🔊 Voice: ON':'🔇 Voice: OFF';speak(SPEECH[cur])};
 addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key===' ')show(cur+1);
   if(e.key==='ArrowLeft')show(cur-1);
