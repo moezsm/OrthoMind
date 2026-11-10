@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Nanotechnologie</title>
+<title>Nanotechnology</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden;background:#050816;color:#e8f1ff;font-family:Segoe UI,Arial,sans-serif}
 #bg{position:fixed;inset:0;z-index:0}
-.slide{position:absolute;inset:0 0 150px 0;display:flex;align-items:center;justify-content:center;gap:48px;padding:30px 70px;opacity:0;pointer-events:none;transform:translateX(80px);transition:opacity .7s,transform .7s;z-index:1}
+.slide{position:absolute;inset:0 0 70px 0;display:flex;align-items:center;justify-content:center;gap:48px;padding:30px 70px;opacity:0;pointer-events:none;transform:translateX(80px);transition:opacity .7s,transform .7s;z-index:1}
 .slide.active{opacity:1;pointer-events:auto;transform:none}
 .slide.prev{transform:translateX(-80px)}
 .text{flex:1;max-width:640px}
@@ -41,10 +41,8 @@ li:before{content:"◆";position:absolute;left:0;color:#9b7bff}
 @keyframes spin{to{transform:rotate(360deg)}}
 .pulse{animation:pulse 2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
 @keyframes pulse{50%{transform:scale(1.2);opacity:.7}}
-#panel{position:fixed;left:0;right:0;bottom:0;height:150px;background:#0b1230ee;border-top:2px solid #4df0ff55;padding:14px 70px;z-index:5;display:flex;gap:24px;align-items:center}
-#speech{flex:1;font-size:1.05rem;line-height:1.5;color:#cfe0ff;max-height:120px;overflow:auto}
-#speech b{color:#4df0ff}
-.ctrl{display:flex;flex-direction:column;gap:8px;align-items:center}
+#panel{position:fixed;left:0;right:0;bottom:0;height:70px;background:#0b1230ee;border-top:2px solid #4df0ff55;padding:10px 70px;z-index:5;display:flex;gap:24px;align-items:center;justify-content:center}
+.ctrl{display:flex;gap:16px;align-items:center}
 .ctrl div{display:flex;gap:8px}
 button{background:#1b2a63;color:#fff;border:1px solid #4df0ff88;border-radius:10px;padding:8px 14px;font-size:1rem;cursor:pointer}
 button:hover{background:#2c44a0}
@@ -56,8 +54,8 @@ button:hover{background:#2c44a0}
 <canvas id="bg"></canvas>
 <div id="bar"></div>
 
-<section class="slide active" data-speech="Bonjour à tous. Aujourd'hui, nous allons explorer la nanotechnologie, la science de l'infiniment petit. Un nanomètre est un milliardième de mètre : c'est environ cent mille fois plus fin qu'un cheveu humain.">
-  <div class="text"><h1>La Nanotechnologie</h1><p class="sub">Maîtriser la matière à l'échelle de l'atome<br>1 nm = 0,000 000 001 m</p><p class="sub author">Présenté par Saida Mrabet</p></div>
+<section class="slide active">
+  <div class="text"><h1>Nanotechnology</h1><p class="sub">Mastering matter at the atomic scale<br>1 nm = 0.000 000 001 m</p><p class="sub author">Presented by Saida Mrabet</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <circle cx="200" cy="200" r="28" fill="#4df0ff"/><circle cx="200" cy="200" r="12" fill="#fff"/>
     <g class="spin"><ellipse cx="200" cy="200" rx="170" ry="60" fill="none" stroke="#9b7bff" stroke-width="3"/><circle cx="370" cy="200" r="12" fill="#9b7bff"/></g>
@@ -66,10 +64,10 @@ button:hover{background:#2c44a0}
   </svg></div>
 </section>
 
-<section class="slide" data-speech="Voici le plan de la présentation : nous définirons d'abord la nanotechnologie, puis nous verrons les nanomatériaux, leurs applications en médecine, en électronique, en énergie et en environnement, avant de comparer les avantages et les inconvénients, et de conclure.">
-  <div class="text"><h2>Table des matières</h2><ul>
-    <li>1. Qu'est-ce que c'est ?</li><li>2. Les nanomatériaux</li><li>3. Applications : médecine</li>
-    <li>4. Électronique, énergie, environnement</li><li>5. Avantages et inconvénients</li><li>6. Conclusion</li></ul></div>
+<section class="slide">
+  <div class="text"><h2>Table of Contents</h2><ul>
+    <li>1. What is it?</li><li>2. Nanomaterials</li><li>3. Applications: Medicine</li>
+    <li>4. Electronics, Energy, Environment</li><li>5. Advantages and Disadvantages</li><li>6. Conclusion</li></ul></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <g fill="#ffffff14" stroke="#4df0ff" stroke-width="3"><rect x="70" y="60" width="260" height="280" rx="16"/></g>
     <g stroke="#9b7bff" stroke-width="5" stroke-linecap="round"><path d="M110 110h40M110 160h40M110 210h40M110 260h40M110 305h40"/></g>
@@ -78,48 +76,48 @@ button:hover{background:#2c44a0}
   </svg></div>
 </section>
 
-<section class="slide" data-speech="La nanotechnologie consiste à concevoir, observer et manipuler des structures dont la taille est comprise entre un et cent nanomètres. À cette échelle, les matériaux acquièrent des propriétés nouvelles : ils deviennent plus résistants, plus conducteurs ou plus réactifs.">
-  <div class="text"><h2>Qu'est-ce que c'est ?</h2><ul>
-    <li>Manipulation de la matière entre 1 et 100 nm</li><li>Idée lancée par Richard Feynman en 1959</li>
-    <li>Propriétés physiques et chimiques nouvelles</li><li>Domaine à la croisée de la physique, chimie et biologie</li></ul></div>
+<section class="slide">
+  <div class="text"><h2>What is it?</h2><ul>
+    <li>Manipulating matter between 1 and 100 nm</li><li>Idea launched by Richard Feynman in 1959</li>
+    <li>New physical and chemical properties</li><li>Crossroads of physics, chemistry and biology</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
-    <rect x="30" y="60" width="340" height="60" rx="10" fill="#ffffff14" stroke="#4df0ff"/><text x="200" y="98" fill="#fff" font-size="22" text-anchor="middle">Cheveu : 80 000 nm</text>
-    <rect x="30" y="150" width="340" height="60" rx="10" fill="#ffffff14" stroke="#9b7bff"/><text x="200" y="188" fill="#fff" font-size="22" text-anchor="middle">Globule rouge : 7 000 nm</text>
-    <rect x="30" y="240" width="340" height="60" rx="10" fill="#ffffff14" stroke="#3dffa0"/><text x="200" y="278" fill="#fff" font-size="22" text-anchor="middle">Virus : 100 nm</text>
-    <circle cx="60" cy="350" r="9" class="pulse" fill="#ff8ad8"/><text x="85" y="357" fill="#fff" font-size="20">Nanoparticule : 1–100 nm</text>
+    <rect x="30" y="60" width="340" height="60" rx="10" fill="#ffffff14" stroke="#4df0ff"/><text x="200" y="98" fill="#fff" font-size="22" text-anchor="middle">Hair: 80,000 nm</text>
+    <rect x="30" y="150" width="340" height="60" rx="10" fill="#ffffff14" stroke="#9b7bff"/><text x="200" y="188" fill="#fff" font-size="22" text-anchor="middle">Red blood cell: 7,000 nm</text>
+    <rect x="30" y="240" width="340" height="60" rx="10" fill="#ffffff14" stroke="#3dffa0"/><text x="200" y="278" fill="#fff" font-size="22" text-anchor="middle">Virus: 100 nm</text>
+    <circle cx="60" cy="350" r="9" class="pulse" fill="#ff8ad8"/><text x="85" y="357" fill="#fff" font-size="20">Nanoparticle: 1–100 nm</text>
   </svg></div>
 </section>
 
-<section class="slide" data-speech="Parmi les nanomatériaux les plus célèbres, on trouve le graphène et les nanotubes de carbone. Ils sont des dizaines de fois plus résistants que l'acier tout en étant extrêmement légers, et ils conduisent très bien l'électricité et la chaleur.">
-  <div class="text"><h2>Les nanomatériaux</h2><ul>
-    <li>Graphène : une couche d'atomes de carbone</li><li>Nanotubes de carbone : ultra-résistants</li>
-    <li>Nanoparticules d'argent et d'or</li><li>Points quantiques pour les écrans</li></ul></div>
+<section class="slide">
+  <div class="text"><h2>Nanomaterials</h2><ul>
+    <li>Graphene: a single layer of carbon atoms</li><li>Carbon nanotubes: ultra-strong</li>
+    <li>Silver and gold nanoparticles</li><li>Quantum dots for displays</li></ul></div>
   <div class="pic float"><svg viewBox="0 0 400 400" fill="none" stroke="#4df0ff" stroke-width="4">
     <polygon points="100,120 130,102 160,120 160,155 130,172 100,155"/><polygon points="160,120 190,102 220,120 220,155 190,172 160,155"/><polygon points="220,120 250,102 280,120 280,155 250,172 220,155"/>
     <polygon points="130,172 160,155 190,172 190,207 160,224 130,207"/><polygon points="190,172 220,155 250,172 250,207 220,224 190,207"/>
     <polygon points="160,224 190,207 220,224 220,259 190,277 160,259"/><polygon points="220,224 250,207 280,224 280,259 250,277 220,259"/>
     <g stroke="#9b7bff"><circle class="pulse" cx="100" cy="120" r="7" fill="#9b7bff"/><circle class="pulse" cx="280" cy="259" r="7" fill="#9b7bff"/><circle class="pulse" cx="190" cy="172" r="7" fill="#9b7bff"/></g>
-    <text x="200" y="340" fill="#fff" stroke="none" font-size="26" text-anchor="middle">Réseau hexagonal de carbone</text>
+    <text x="200" y="340" fill="#fff" stroke="none" font-size="26" text-anchor="middle">Hexagonal carbon lattice</text>
   </svg></div>
 </section>
 
-<section class="slide" data-speech="En médecine, les nanoparticules peuvent transporter un médicament directement jusqu'aux cellules malades, par exemple les cellules cancéreuses. Les traitements sont ainsi plus efficaces, avec moins d'effets secondaires. La nanotechnologie améliore aussi le diagnostic précoce et les vaccins.">
-  <div class="text"><h2>Applications : médecine</h2><ul>
-    <li>Médicaments ciblés contre le cancer</li><li>Diagnostic précoce par nanocapteurs</li>
-    <li>Vaccins à ARN dans des nanoparticules lipidiques</li><li>Pansements antibactériens</li></ul></div>
+<section class="slide">
+  <div class="text"><h2>Applications: Medicine</h2><ul>
+    <li>Targeted drugs against cancer</li><li>Early diagnosis with nanosensors</li>
+    <li>RNA vaccines in lipid nanoparticles</li><li>Antibacterial dressings</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
     <circle cx="200" cy="200" r="150" fill="#ff5f7a22" stroke="#ff5f7a" stroke-width="3"/>
     <circle cx="200" cy="200" r="55" fill="#ff5f7a55" stroke="#ff8ad8" stroke-width="3" class="pulse"/>
     <g fill="#4df0ff"><circle class="float" cx="90" cy="140" r="14"/><circle class="float" style="animation-delay:.7s" cx="130" cy="290" r="14"/><circle class="float" style="animation-delay:1.4s" cx="300" cy="120" r="14"/><circle class="float" style="animation-delay:2s" cx="290" cy="290" r="14"/></g>
     <g stroke="#4df0ff" stroke-width="2" stroke-dasharray="6 6"><line x1="104" y1="150" x2="160" y2="180"/><line x1="140" y1="278" x2="170" y2="240"/><line x1="290" y1="130" x2="245" y2="170"/><line x1="282" y1="278" x2="240" y2="240"/></g>
-    <text x="200" y="206" fill="#fff" font-size="18" text-anchor="middle">Cellule</text>
+    <text x="200" y="206" fill="#fff" font-size="18" text-anchor="middle">Cell</text>
   </svg></div>
 </section>
 
-<section class="slide" data-speech="En électronique, les transistors actuels mesurent quelques nanomètres seulement, ce qui permet des processeurs puissants dans nos téléphones. En énergie, les nanomatériaux améliorent les panneaux solaires et les batteries, et l'environnement en profite avec des filtres capables de dépolluer l'eau.">
-  <div class="text"><h2>Électronique, énergie, environnement</h2><ul>
-    <li>Processeurs gravés à quelques nanomètres</li><li>Batteries plus rapides et plus durables</li>
-    <li>Panneaux solaires plus efficaces</li><li>Filtres nanométriques pour purifier l'eau</li></ul></div>
+<section class="slide">
+  <div class="text"><h2>Electronics, Energy, Environment</h2><ul>
+    <li>Processors etched at a few nanometers</li><li>Faster, longer-lasting batteries</li>
+    <li>More efficient solar panels</li><li>Nano-filters to purify water</li></ul></div>
   <div class="pic"><svg viewBox="0 0 400 400">
     <rect x="90" y="90" width="220" height="220" rx="18" fill="#1b2a63" stroke="#9b7bff" stroke-width="4"/>
     <rect x="145" y="145" width="110" height="110" rx="8" fill="#050816" stroke="#4df0ff" stroke-width="3" class="pulse"/>
@@ -128,19 +126,19 @@ button:hover{background:#2c44a0}
   </svg></div>
 </section>
 
-<section class="slide" data-speech="Faisons le bilan. Côté avantages : des traitements médicaux plus précis, des matériaux plus légers et plus solides, des économies d'énergie et des appareils plus performants. Côté inconvénients : la toxicité des nanoparticules pour la santé et l'environnement est encore mal connue, les coûts de recherche et de production sont élevés, il existe des risques pour la vie privée avec des capteurs invisibles, et la réglementation reste insuffisante.">
+<section class="slide">
   <div class="cols">
-    <div class="col pro"><h2>✔ Avantages</h2><ul>
-      <li>Médecine précise et moins invasive</li><li>Matériaux légers et très résistants</li>
-      <li>Économies d'énergie</li><li>Miniaturisation des appareils</li><li>Dépollution de l'eau et de l'air</li></ul></div>
-    <div class="col con"><h2>✘ Inconvénients</h2><ul>
-      <li>Toxicité possible pour la santé</li><li>Impact environnemental mal connu</li>
-      <li>Coûts de production élevés</li><li>Risques pour la vie privée</li><li>Réglementation encore insuffisante</li></ul></div>
+    <div class="col pro"><h2>✔ Advantages</h2><ul>
+      <li>Precise, less invasive medicine</li><li>Light and very strong materials</li>
+      <li>Energy savings</li><li>Device miniaturization</li><li>Water and air decontamination</li></ul></div>
+    <div class="col con"><h2>✘ Disadvantages</h2><ul>
+      <li>Possible health toxicity</li><li>Poorly understood environmental impact</li>
+      <li>High production costs</li><li>Privacy risks</li><li>Insufficient regulation</li></ul></div>
   </div>
 </section>
 
-<section class="slide" data-speech="Pour conclure, la nanotechnologie est une révolution qui touche la santé, l'énergie et l'électronique. Son potentiel est immense, mais elle doit se développer de manière responsable, avec des études de sécurité et des règles claires. Merci de votre attention !">
-  <div class="text"><h1>Merci pour votre attention</h1><p class="sub">Thank you for your attention<br>Un futur minuscule… aux enjeux immenses.<br>Des questions ?</p></div>
+<section class="slide">
+  <div class="text"><h1>Thank you for your attention</h1><p class="sub">A tiny future… with immense stakes.<br>Any questions?</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <g class="spin"><circle cx="200" cy="200" r="150" fill="none" stroke="#4df0ff" stroke-width="3" stroke-dasharray="10 14"/></g>
     <g class="spin2"><circle cx="200" cy="200" r="100" fill="none" stroke="#9b7bff" stroke-width="3" stroke-dasharray="4 10"/></g>
@@ -149,36 +147,23 @@ button:hover{background:#2c44a0}
 </section>
 
 <div id="panel">
-  <div id="speech"></div>
   <div class="ctrl"><div>
-    <button id="prev">◀</button><button id="play">🔊 Parole : ON</button><button id="next">▶</button></div>
+    <button id="prev">◀</button><button id="next">▶</button></div>
     <span id="count"></span></div>
 </div>
 
 <script>
 const slides=[...document.querySelectorAll('.slide')];
-let cur=0,voice=true,auto=true;
-const speech=document.getElementById('speech');
-function speak(t){
-  speechSynthesis.cancel();
-  if(!voice)return;
-  const u=new SpeechSynthesisUtterance(t);u.lang='fr-FR';u.rate=.95;
-  u.onend=()=>{if(voice&&auto&&cur<slides.length-1)setTimeout(()=>{if(auto)show(cur+1)},1500)};
-  speechSynthesis.speak(u);
-}
+let cur=0;
 function show(i){
   cur=Math.max(0,Math.min(slides.length-1,i));
   slides.forEach((s,k)=>{s.classList.toggle('active',k===cur);s.classList.toggle('prev',k<cur)});
-  const t=slides[cur].dataset.speech;
-  speech.innerHTML='<b>🎤 Discours :</b> '+t;
   document.getElementById('count').textContent=(cur+1)+' / '+slides.length;
   document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
-  speak(t);
 }
-function go(d){auto=false;show(cur+d)}
+function go(d){show(cur+d)}
 document.getElementById('next').onclick=()=>go(1);
 document.getElementById('prev').onclick=()=>go(-1);
-document.getElementById('play').onclick=e=>{voice=!voice;e.target.textContent='🔊 Parole : '+(voice?'ON':'OFF');voice?speak(slides[cur].dataset.speech):speechSynthesis.cancel()};
 addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key===' ')go(1);
   if(e.key==='ArrowLeft')go(-1);
