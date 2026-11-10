@@ -21,7 +21,8 @@ li:before{content:"◆";position:absolute;left:0;color:#9b7bff}
 .active li{animation:in .6s forwards}
 .active li:nth-child(1){animation-delay:.3s}.active li:nth-child(2){animation-delay:.6s}
 .active li:nth-child(3){animation-delay:.9s}.active li:nth-child(4){animation-delay:1.2s}
-.active li:nth-child(5){animation-delay:1.5s}
+.active li:nth-child(5){animation-delay:1.5s}.active li:nth-child(6){animation-delay:1.8s}
+.author{margin-top:22px;color:#4df0ff;font-weight:600}
 @keyframes in{to{opacity:1;transform:none}}
 .pic{flex:0 0 380px;height:380px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 0 25px #4df0ff66)}
 .pic svg{width:100%;height:100%}
@@ -56,12 +57,24 @@ button:hover{background:#2c44a0}
 <div id="bar"></div>
 
 <section class="slide active" data-speech="Bonjour à tous. Aujourd'hui, nous allons explorer la nanotechnologie, la science de l'infiniment petit. Un nanomètre est un milliardième de mètre : c'est environ cent mille fois plus fin qu'un cheveu humain.">
-  <div class="text"><h1>La Nanotechnologie</h1><p class="sub">Maîtriser la matière à l'échelle de l'atome<br>1 nm = 0,000 000 001 m</p></div>
+  <div class="text"><h1>La Nanotechnologie</h1><p class="sub">Maîtriser la matière à l'échelle de l'atome<br>1 nm = 0,000 000 001 m</p><p class="sub author">Présenté par Saida Mrabet</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <circle cx="200" cy="200" r="28" fill="#4df0ff"/><circle cx="200" cy="200" r="12" fill="#fff"/>
     <g class="spin"><ellipse cx="200" cy="200" rx="170" ry="60" fill="none" stroke="#9b7bff" stroke-width="3"/><circle cx="370" cy="200" r="12" fill="#9b7bff"/></g>
     <g class="spin2"><ellipse cx="200" cy="200" rx="60" ry="170" fill="none" stroke="#3dffa0" stroke-width="3"/><circle cx="200" cy="30" r="12" fill="#3dffa0"/></g>
     <g class="spin" style="animation-duration:9s"><ellipse cx="200" cy="200" rx="150" ry="110" transform="rotate(45 200 200)" fill="none" stroke="#ff8ad8" stroke-width="3"/><circle cx="306" cy="94" r="11" fill="#ff8ad8"/></g>
+  </svg></div>
+</section>
+
+<section class="slide" data-speech="Voici le plan de la présentation : nous définirons d'abord la nanotechnologie, puis nous verrons les nanomatériaux, leurs applications en médecine, en électronique, en énergie et en environnement, avant de comparer les avantages et les inconvénients, et de conclure.">
+  <div class="text"><h2>Table des matières</h2><ul>
+    <li>1. Qu'est-ce que c'est ?</li><li>2. Les nanomatériaux</li><li>3. Applications : médecine</li>
+    <li>4. Électronique, énergie, environnement</li><li>5. Avantages et inconvénients</li><li>6. Conclusion</li></ul></div>
+  <div class="pic float"><svg viewBox="0 0 400 400">
+    <g fill="#ffffff14" stroke="#4df0ff" stroke-width="3"><rect x="70" y="60" width="260" height="280" rx="16"/></g>
+    <g stroke="#9b7bff" stroke-width="5" stroke-linecap="round"><path d="M110 110h40M110 160h40M110 210h40M110 260h40M110 305h40"/></g>
+    <g stroke="#b8c8e8" stroke-width="5" stroke-linecap="round"><path d="M175 110h120M175 160h100M175 210h120M175 260h90M175 305h110"/></g>
+    <circle class="pulse" cx="310" cy="60" r="12" fill="#3dffa0"/>
   </svg></div>
 </section>
 
@@ -127,7 +140,7 @@ button:hover{background:#2c44a0}
 </section>
 
 <section class="slide" data-speech="Pour conclure, la nanotechnologie est une révolution qui touche la santé, l'énergie et l'électronique. Son potentiel est immense, mais elle doit se développer de manière responsable, avec des études de sécurité et des règles claires. Merci de votre attention !">
-  <div class="text"><h1>Merci !</h1><p class="sub">Un futur minuscule… aux enjeux immenses.<br>Des questions ?</p></div>
+  <div class="text"><h1>Merci pour votre attention</h1><p class="sub">Thank you for your attention<br>Un futur minuscule… aux enjeux immenses.<br>Des questions ?</p></div>
   <div class="pic float"><svg viewBox="0 0 400 400">
     <g class="spin"><circle cx="200" cy="200" r="150" fill="none" stroke="#4df0ff" stroke-width="3" stroke-dasharray="10 14"/></g>
     <g class="spin2"><circle cx="200" cy="200" r="100" fill="none" stroke="#9b7bff" stroke-width="3" stroke-dasharray="4 10"/></g>
